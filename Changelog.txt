@@ -1,3 +1,18 @@
+====== 5.4
+* Updated for Siege of Ogrimmar.
+
+===== 5.3
+* Updated for patch Escalation.
+
+===== 5.2
+* Updated for patch The Thunder King
+
+===== 5.1
+* Updated for patch Landfall
+
+===== 5.0
+* Updated for Mists of Pandaria.
+
 ====== 4.11
 * Now uses Poncho-1.0, Sushi-3.0 and CustomTutorials-2.1 to generate its options and tutorials
 * The tutorials now show up on more appropriate situations
@@ -92,4 +107,4 @@ Remade Blitz completely. Large list of changes below.
 * Initial releasee
 
 ===== 1
-* Initial release
+* Initial releasese
