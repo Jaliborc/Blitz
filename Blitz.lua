@@ -1,5 +1,5 @@
 --[[
-Copyright 2009-2013 João Cardoso
+Copyright 2009-2015 João Cardoso
 Blitz is distributed under the terms of the GNU General Public License (or the Lesser GPL).
 This file is part of Blitz.
 
@@ -19,6 +19,7 @@ along with Blitz. If not, see <http://www.gnu.org/licenses/>.
 
 local Blitz = CreateFrame('CheckButton', 'Blitz', QuestFrame, 'OptionsSmallCheckButtonTemplate')
 local L = Blitz_Locals
+local BIG = 2^10000
 
 
 --[[ Startup ]]--
@@ -62,9 +63,8 @@ function Blitz:StartupSettings()
 end
 
 function Blitz:StartupOptions()
-	local frame = CreateFrame('Frame', 'BlitzOptions')
+	local frame = CreateFrame('Frame', 'BlitzOptions', InterfaceOptionsFrame)
 	frame.name = 'Blitz'
-	
 	frame:SetScript('OnShow', function()
 		local loaded, reason = LoadAddOn('Blitz_Options')
 		if not loaded then
@@ -74,17 +74,18 @@ function Blitz:StartupOptions()
 			string:SetPoint('LEFT', 40, 0)
 			string:SetHeight(30)
 		end
+
+		InterfaceOptions_AddCategory(frame)
+		frame:SetScript('OnShow', nil)
 	end)
-	
-	InterfaceOptions_AddCategory(frame)
 end
 
 
 --[[ Gossip Events ]]--
 
 function Blitz:GOSSIP_SHOW()
-	if self:IsKeyDown() and not self:BestSkip(GetNumGossipActiveQuests, GetGossipActiveQuests, SelectGossipActiveQuest, 4) then
-		self:BestSkip(GetNumGossipAvailableQuests, GetGossipAvailableQuests, SelectGossipAvailableQuest, 5)
+	if self:IsKeyDown() and not self:BestSkip(GetNumGossipActiveQuests, GetGossipActiveQuests, SelectGossipActiveQuest, 5) then
+		self:BestSkip(GetNumGossipAvailableQuests, GetGossipAvailableQuests, SelectGossipAvailableQuest, 6)
 	end
 end
 
@@ -95,7 +96,7 @@ function Blitz:QUEST_GREETING()
 end
 
 function Blitz:BestSkip(total, get, set, args)
-	local off, delivers = args - 1, 1/0
+	local off, delivers = args - 1, BIG
 	local quest
 	
 	for i = 1, total() do
@@ -234,7 +235,7 @@ function Blitz:CanSkip(name, data)
 end
 
 function Blitz:NumStacks(data)
-	local delivers = 1/0
+	local delivers = BIG
 	for item, required in gmatch(data, '(%d+):(%d+)') do
 		delivers = min(delivers, floor(GetItemCount(item) / tonumber(required)))
 	end
@@ -244,7 +245,9 @@ function Blitz:NumStacks(data)
 		delivers = min(delivers, floor(GetMoney() / tonumber(money)))
 	end
 	
-	return delivers > 0 and delivers
+	if delivers > 0 and delivers < BIG then
+		return delivers
+	end
 end
 
 
@@ -252,7 +255,7 @@ end
 
 function Blitz:GetLogData(name)
 	for i = 1, MAX_QUESTLOG_QUESTS * 2 do
-		local title, _,_,_,_,_, complete = GetQuestLogTitle(i)
+		local title, _,_,_,_, complete = GetQuestLogTitle(i)
 		if title == name then
 			return true, complete
 		end
