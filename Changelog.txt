@@ -1,4 +1,4 @@
-##### 6.2
+##### 7.2
 * Updated for Tomb of Sargeras.
 
 ##### 6.1
