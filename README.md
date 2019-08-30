@@ -1,4 +1,4 @@
-![Preview](http://jaliborc.com/images/addons/large/blitz.jpg)
+![Preview](http://jaliborc.com/images/addons/large/blitz.jpg#1)
 
 [![Install](http://img.shields.io/badge/install-twitch-blueviolet)](https://www.curseforge.com/wow/addons/blitz/files)
 [![Patreon](http://img.shields.io/badge/donate-patreon-orange)](https://www.patreon.com/jaliborc)
