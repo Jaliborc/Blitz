@@ -1,3 +1,24 @@
+##### 8.2.2
+* Added support for Immersion addon.
+* Updated internal libraries.
+
+##### 8.2.1
+* Made compatible with classic servers.
+
+##### 8.2.0
+* Updated for World of Warcraft patch 8.2.0.
+
+#### 8.1.0
+* Updated for World of Warcraft patch 8.1.0.
+
+#### 8.0
+* Updated for Battle for Azeroth.
+* Added patron list.
+* Settings can now be reset to their defaults.
+
+#### 7.3
+* Updated for Shadow of Argus.
+
 ##### 7.2
 * Updated for Tomb of Sargeras.
 
