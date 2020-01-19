@@ -1,3 +1,6 @@
+#### 8.3.0
+* Updated for Visions of Nzoth.
+
 ##### 8.2.2
 * Added support for Immersion addon.
 * Updated internal libraries.

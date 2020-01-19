@@ -17,70 +17,49 @@ You should have received a copy of the GNU General Public License
 along with Blitz. If not, see <http://www.gnu.org/licenses/>.
 --]]
 
-local Blitz = CreateFrame('CheckButton', 'Blitz', ImmersionContentFrame or QuestFrame, 'OptionsSmallCheckButtonTemplate')
-local L = Blitz_Locals
+local Blitz = LibStub('WildAddon-1.0'):NewAddon('Blitz', CreateFrame('CheckButton', 'Blitz', ImmersionContentFrame or QuestFrame, 'OptionsSmallCheckButtonTemplate'))
 local BIG = 2^10000
 
 
 --[[ Startup ]]--
 
-function Blitz:Startup()
-	self:RegisterEvent('ADDON_LOADED')
-	self:SetScript('OnEvent', self.StartupSettings)
-end
-
-function Blitz:StartupSettings()
+function Blitz:OnEnable()
+	self:SetScript('OnClick', self.ToggleQuest)
+	self:SetFontString(_G[self:GetName() .. 'Text'])
+	self:SetText(self.Locals.AutomateQuest)
 	self:RegisterEvent('GOSSIP_SHOW')
 	self:RegisterEvent('QUEST_GREETING')
 	self:RegisterEvent('QUEST_DETAIL')
 	self:RegisterEvent('QUEST_PROGRESS')
 	self:RegisterEvent('QUEST_COMPLETE')
-	self:UnregisterEvent('ADDON_LOADED')
-
-	self:StartupOptions()
-	self:SetScript('OnClick', self.ToggleQuest)
-	self:SetScript('OnEvent', function(self, event) self[event](self) end)
+	self:OnSettings()
 
 	if ImmersionContentFrame then
 		self:SetPoint('TOPRIGHT', -80, 0)
 	else
-		self:SetPoint('TOPLEFT', 74, -30)
-	end
-
-	if Blitz_Tutorials ~= 2 then
-		function self:TriggerTutorials()
-			if LoadAddOn('Blitz_Options') then
-				LibStub('CustomTutorials-2.1').TriggerTutorial('Blitz', 2)
-			end
-		end
-
-		if not Blitz_Tutorials then
-			Blitz_Key = 'Shift'
-		end
-	else
-		function self:TriggerTutorials() end
+		self:SetPoint('TOPLEFT', 74, WOW_PROJECT_ID == WOW_PROJECT_CLASSIC and -50 or -30)
 	end
 
 	hooksecurefunc('QuestInfoItem_OnClick', function() self:SaveQuest() end)
-	BlitzText:SetText(L.AutomateQuest)
-	Blitz_Quests = Blitz_Quests or {}
+	CreateFrame('Frame', nil, InterfaceOptionsFrame):SetScript('OnShow', function()
+		LoadAddOn('Blitz_Config')
+	end)
 end
 
-function Blitz:StartupOptions()
-	local frame = CreateFrame('Frame', 'BlitzOptions', InterfaceOptionsFrame)
-	frame.name = '|TInterface\\PVPFrame\\Icons\\prestige-icon-4-1:13:13:1:2:128:128:26:102:26:102|t Blitz'
-	frame:SetScript('OnShow', function()
-		local loaded, reason = LoadAddOn('Blitz_Options')
-		if not loaded then
-			local string = frame:CreateFontString(nil, nil, 'GameFontHighlight')
-			string:SetText(L.MissingOptions:format(_G['ADDON_'..reason]:lower()))
-			string:SetPoint('RIGHT', -40, 0)
-			string:SetPoint('LEFT', 40, 0)
-			string:SetHeight(30)
-		end
-	end)
+function Blitz:OnSettings()
+	Blitz_Sets = Blitz_Sets or {
+		quests = Blitz_Quests or {},
+		tutorial = Blitz_Tutorials,
+		key = Blitz_Key or 'Shift'
+	}
 
-	InterfaceOptions_AddCategory(frame)
+	self.sets = Blitz_Sets
+end
+
+function Blitz:OnTutorials()
+	if self.sets.tutorials ~= 2 and LoadAddOn('Blitz_Config') then
+		Blitz.Tutorials:Show()
+	end
 end
 
 
@@ -121,7 +100,7 @@ end
 --[[ Quest Events ]]--
 
 function Blitz:QUEST_DETAIL()
-	if self:IsKeyDown() and (Blitz_Accept or self:IsEnabled(GetTitleText())) then
+	if self:IsKeyDown() and (self.sets.accept or self:IsEnabled(GetTitleText())) then
 		AcceptQuest()
 	end
 	self:UpdateButton()
@@ -146,7 +125,7 @@ function Blitz:QUEST_COMPLETE()
 				GetQuestReward(item)
 
 				if numSkips > 1 and LoadAddOn('Blitz_Progress') then
-					Blitz_Progress:ShowQuest(name, data, numSkips)
+					Blitz.Progress:ShowQuest(name, data, numSkips)
 				end
 			elseif data then
 				QuestChooseRewardError()
@@ -173,7 +152,7 @@ function Blitz:UpdateButton(active)
 
 	if self:IsDaily() or isRepeatable then
 		self:SetChecked(self:IsEnabled(name) and true)
-		self:TriggerTutorials()
+		self:OnTutorials()
 		self:Show()
 	else
 		self:Hide()
@@ -182,7 +161,7 @@ end
 
 function Blitz:ToggleQuest()
 	local name = GetTitleText()
-	Blitz_Quests[name] = not Blitz_Quests[name] or nil
+	self.sets.quests[name] = not self.sets.quests[name] or nil
 	self:SaveQuest()
 end
 
@@ -192,7 +171,7 @@ function Blitz:SaveQuest()
 
 	if self:IsEnabled(name) then
 		if self:IsDaily() then
-			Blitz_Quests[name] = reward
+			self.sets.quests[name] = reward
 		else
 			local data = ''
 			for i = 1, GetNumQuestItems() do
@@ -211,7 +190,7 @@ function Blitz:SaveQuest()
 				data = data .. '|' .. reward
 			end
 
-			Blitz_Quests[name] = data
+			self.sets.quests[name] = data
 		end
 	end
 end
@@ -231,7 +210,7 @@ end
 function Blitz:CanSkip(name, data)
 	local active, completed = self:GetLogData(name)
 	if active then
-		return (data or Blitz_Deliver) and completed
+		return (data or self.sets.deliver) and completed
 	else
 		return data
 	end
@@ -272,7 +251,7 @@ end
 function Blitz:GetReward(data)
 	local item = type(data) == 'string' and strmatch(data, '|(%d+)') or data
 
-	if not item and Blitz_SelectReward then
+	if not item and self.sets.reward then
 		local best = 0
 		for i = 1, GetNumQuestChoices() do
 			local id = self:GetItem('choice', i)
@@ -294,15 +273,13 @@ function Blitz:IsDaily()
 end
 
 function Blitz:IsEnabled(name)
-	return Blitz_Quests[name]
+	return self.sets.quests[name]
 end
 
 function Blitz:IsKeyDown()
-	local down = Blitz_Key and _G['Is' .. Blitz_Key .. 'KeyDown']()
-	if not Blitz_Manual then
+	local down = self.sets.key and _G['Is' .. self.sets.key .. 'KeyDown']()
+	if not self.sets.manual then
 		down = not down
 	end
 	return down
 end
-
-Blitz:Startup()

@@ -1,0 +1,6 @@
+<Ui>
+	<Include file="..\..\libs\main.xml"/>
+	
+	<Script file="main.lua"/>
+  <Script file="locales.lua"/>
+</Ui>

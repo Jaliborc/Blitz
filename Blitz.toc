@@ -1,6 +1,5 @@
 ## Interface: 80200
 ## Title: |cff66ccffBlitz|r
-
 ## Author: Jaliborc (João Cardoso)
 ## Notes: Automatically accepts and delivers quests.
 ## X-License: GNU General Public License Version 3
@@ -8,8 +7,6 @@
 ## Version: 8.2.2
 
 ## OptionalDeps: Immersion
-## SavedVariables: Blitz_Manual, Blitz_Key, Blitz_Tutorials
-## SavedVariablesPerCharacter: Blitz_Quests, Blitz_Deliver, Blitz_Accept, Blitz_SelectReward
+## SavedVariables: Blitz_Sets
 
-Localization.lua
-Blitz.lua
+addons\main\main.xml
