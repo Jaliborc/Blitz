@@ -1,5 +1,5 @@
 --[[
-Copyright 2009-2019 João Cardoso
+Copyright 2009-2020 João Cardoso
 Blitz is distributed under the terms of the GNU General Public License (or the Lesser GPL).
 This file is part of Blitz.
 
