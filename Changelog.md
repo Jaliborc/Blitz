@@ -1,3 +1,6 @@
+#### 9.0.0 (beta)
+* Updated for Shadowlands.
+
 #### 8.3.0
 * Updated for Visions of Nzoth.
 
