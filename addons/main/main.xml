@@ -1,6 +1,9 @@
 <Ui>
 	<Include file="..\..\libs\main.xml"/>
-	
+
 	<Script file="main.lua"/>
-  <Script file="locales.lua"/>
+	<Script file="locales.lua"/>
+	<Script file="server.lua"/>
+	<Script file="events.lua"/>
+	<Script file="button.lua"/>
 </Ui>

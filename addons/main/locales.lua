@@ -1,4 +1,5 @@
-local L = Blitz:NewModule('Locals')
+local ADDON, Addon = ...
+local L = Addon:NewModule('Locals')
 local Language = GetLocale()
 
 -- Traditional Chinese --

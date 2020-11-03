@@ -86,17 +86,17 @@ function Progress:Startup()
 	self.Name:Hide()
 end
 
-function Progress:Display(title, items, numDelivers)
-	local progress = Progress:GetProgress(title, numDelivers)
+function Progress:Display(id, items, numDelivers)
+	local progress = Progress:GetProgress(id, numDelivers)
 	local item, amount = Progress:GetWorseItem(items)
 
 	SetPortraitTexture(self.Portrait, 'NPC')
+	self.Unlocked:SetText(C_QuestLog.GetQuestInfo(id))
 	self.Icon.Texture:SetTexture(GetItemIcon(item))
 	self.Icon.Count:SetText(format('%s/%s', GetItemCount(item) or '?', amount or '?'))
 	self.Arrow.Fill:SetTexCoord(0, progress, 0, 1)
 	self.Arrow.Fill:SetWidth(190 * progress)
 	self.Arrow.Spark:SetShown(progress < 0.92)
-	self.Unlocked:SetText(title)
 end
 
 function Progress:GetProgress(id, numSteps)
