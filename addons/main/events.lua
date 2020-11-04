@@ -84,7 +84,7 @@ function Events:QUEST_COMPLETE()
 		local data = Addon:IsEnabled(id)
     local item = self:GetReward(data)
     local skips = self:NumSkips(id)
-    
+
 		if skips then
 			if GetNumQuestChoices() == 0 or item > 0 then
 				GetQuestReward(item)

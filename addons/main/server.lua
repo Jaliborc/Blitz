@@ -19,8 +19,8 @@ along with Blitz. If not, see <http://www.gnu.org/licenses/>.
 
 local ADDON, Addon = ...
 local Server = Addon:NewModule('Server')
-Server.SelectActive = C_GossipInfo.SelectActive or SelectGossipActiveQuest
-Server.SelectAvailable = C_GossipInfo.SelectAvailable or SelectGossipAvailableQuest
+Server.SelectActive = C_GossipInfo.SelectActiveQuest or SelectGossipActiveQuest
+Server.SelectAvailable = C_GossipInfo.SelectAvailableQuest or SelectGossipAvailableQuest
 Server.NumActive = C_GossipInfo.GetNumActiveQuests or GetNumGossipActiveQuests
 Server.NumAvailable = C_GossipInfo.GetNumAvailableQuests or GetNumGossipAvailableQuests
 
