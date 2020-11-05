@@ -29,12 +29,7 @@ function Blitz:OnEnable()
 end
 
 function Blitz:OnSettings()
-	Blitz_Sets = Blitz_Sets or {
-		quests = Blitz_Quests or {},
-		tutorial = Blitz_Tutorials,
-		key = Blitz_Key or 'Shift'
-	}
-
+	Blitz_Sets = Blitz_Sets or {quests = {}, key = 'Shift'}
 	self.sets = Blitz_Sets
 end
 
