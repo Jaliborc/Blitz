@@ -42,8 +42,8 @@ function Events:GOSSIP_SHOW()
 end
 
 function Events:QUEST_GREETING()
-	if Addon:IsKeyDown() and not self:BestSkip(GetNumActiveQuests, GetActiveQuestID, SelectActiveQuest) then
-		self:BestSkip(GetNumAvailableQuests, GetAvailableTitle, SelectAvailableQuest)
+	if Addon:IsKeyDown() then
+		self:BestSkip(GetNumActiveQuests, GetActiveQuestID, SelectActiveQuest)
 	end
 end
 
