@@ -62,7 +62,8 @@ end
 
 function Button:UpdateButton(active)
 	local id = GetQuestID()
-	local repeatable = active and not C_QuestLog.IsOnQuest(id)
+	local repeatable = C_QuestLog.IsRepeatableQuest and C_QuestLog.IsRepeatableQuest(id)
+                        or active and not C_QuestLog.IsOnQuest(id)
 
 	if self:IsPeriodic() or repeatable then
 		self:SetChecked(Addon:IsEnabled(id) and true)
