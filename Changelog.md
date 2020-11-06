@@ -1,4 +1,7 @@
-#### 9.0.1 (beta)
+##### 9.0.2 (beta)
+* More reliably detect some repeatable quests.
+
+##### 9.0.1 (beta)
 * Bugfixes
 
 #### 9.0.0 (beta)
