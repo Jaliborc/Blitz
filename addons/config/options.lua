@@ -1,5 +1,5 @@
 --[[
-Copyright 2009-2020 João Cardoso
+Copyright 2009-2021 João Cardoso
 Blitz is distributed under the terms of the GNU General Public License (or the Lesser GPL).
 This file is part of Blitz.
 
@@ -21,8 +21,8 @@ local Sushi = LibStub('Sushi-3.1')
 local Options = Blitz:NewModule('Options', Sushi.OptionsGroup('Blitz|TInterface/PVPFrame/Icons/prestige-icon-4-1:16:16:0:0|t'))
 local L = Blitz.Locals
 
-local PATRONS = {{title='Jenkins',people={'Gnare ','ProfessahX ','Justin Rusbatch'}},{},{title='Ambassador',people={'Fernando Bandeira','Michael Irving','Julia F','Peggy Webb','Lolari ','Craig Falb','Mónica Sanchez Calzado','Dr Jebus','Denny Hyde','Mary Daniels'}}} -- generated patron list
-local FOOTER = 'Copyright 2008-2020 João Cardoso'
+local PATRONS = {{title='Jenkins',people={'Gnare ','Justin Rusbatch'}},{},{title='Ambassador',people={'Fernando Bandeira','Julia F','Lolari ','Craig Falb','Mónica Sanchez Calzado','Denny Hyde','Amanda Chesher','Lynx','Owen Pitcairn','Robert Cohen ','JoeP1984','Rafael Lins'}}} -- generated patron list
+local FOOTER = 'Copyright 2008-2021 João Cardoso'
 
 
 --[[ Startup ]]--

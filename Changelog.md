@@ -1,3 +1,6 @@
+##### 9.0.3
+* Updated for the Burning Crusade servers.
+
 ##### 9.0.2 (beta)
 * More reliably detect some repeatable quests.
 
