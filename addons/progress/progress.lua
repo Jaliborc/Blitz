@@ -116,7 +116,7 @@ function Progress:GetWorseItem(items)
 	local leastStacks = 2^10000
 	local item, amount
 
-	for id, required in gmatch(data, '(%d+):(%d+)') do
+	for id, required in gmatch(items, '(%d+):(%d+)') do
 		local stacks = floor(GetItemCount(id) / tonumber(required))
 		if stacks < leastStacks then
 			leastStacks = stacks

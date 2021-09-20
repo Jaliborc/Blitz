@@ -37,7 +37,7 @@ end
 --[[ Basics ]]--
 
 function Blitz:IsEnabled(id)
-	return self.sets.quests[id]
+	return id and self.sets.quests[id]
 end
 
 function Blitz:IsKeyDown()

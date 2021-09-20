@@ -36,8 +36,6 @@ function Server.GetAvailable(i)
   if C_GossipInfo.GetAvailableQuests then
     return C_GossipInfo.GetAvailableQuests()[i].questID
   end
-
-  return select(i*8, GetGossipAvailableQuests())
 end
 
 function Server.IsComplete(id)

@@ -1,3 +1,11 @@
+##### 9.1.1
+* Fixed bug in Vanilla and TBC servers.
+* Fixed bug in progress bar.
+* Added some additional bug prevention measures.
+
+#### 9.1.0
+* Updated for Chains of Domination
+
 ##### 9.0.3
 * Updated for the Burning Crusade servers.
 

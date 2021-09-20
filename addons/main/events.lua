@@ -50,7 +50,7 @@ end
 function Events:BestSkip(total, get, set)
 	local delivers, quest = BIG
 	for i = 1, total() do
-		local num = self:NumSkips(get(i))
+		local num = self:NumSkips(get and get(i))
 		if num and num < delivers then
 			delivers = num
 			quest = i
@@ -110,9 +110,9 @@ end
 --[[ API ]]--
 
 function Events:NumSkips(id)
-	local data = Addon:IsEnabled(id)
+  local data = Addon:IsEnabled(id)
 	if type(data) ~= 'string' then
-		if C_QuestLog.IsOnQuest(id) then
+		if id and C_QuestLog.IsOnQuest(id) then
 			return (data or Addon.sets.deliver) and S.IsComplete(id) and 0
 		end
 
