@@ -1,3 +1,6 @@
+##### 9.1.2
+* Updated TOC
+
 ##### 9.1.1
 * Fixed bug in Vanilla and TBC servers.
 * Fixed bug in progress bar.
