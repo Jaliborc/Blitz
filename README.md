@@ -1,13 +1,9 @@
-![Preview](http://jaliborc.com/images/addons/large/blitz.jpg#1)
+![Preview](http://jaliborc.com/media/addons/large/blitz.jpg)
 
-[![Install](http://img.shields.io/badge/install-curseforge-484266)](https://www.curseforge.com/wow/addons/blitz/files)
-[![Patreon](http://img.shields.io/badge/donate-patreon-ff4d42)](https://www.patreon.com/jaliborc)
+[![Install](http://img.shields.io/badge/install-curseforge-f16436)](https://www.curseforge.com/wow/addons/pettracker)
+[![Patreon](http://img.shields.io/badge/news-patreon-ff424d)](https://www.patreon.com/jaliborc)
+[![Community](http://img.shields.io/badge/community-discord-5865F2)](https://bit.ly/discord-jaliborc)
 
-# Blitz
-Blitz is an World of Warcraft addon that automatically accepts and delivers quests for you.
-What makes it different from other quest turning addons? Mainly, it is:
 
-* Easy to Use
-* Customizable
-* Has a progress bar for delivering repeatable quests
-* Provides in-game tutorials for quick learning
+# Blitz :runner:
+Blitz can automatically accept and deliver quests for you. It is easy to use and setup and can show a progress bar when delivering multiple times a repeatable quest.
