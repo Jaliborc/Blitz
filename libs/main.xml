@@ -3,4 +3,14 @@
 	<Script file="CallbackHandler-1.0\CallbackHandler-1.0.lua"/>
 	<Script file="AceEvent-3.0\AceEvent-3.0.lua"/>
 	<Script file="WildAddon-1.0\WildAddon-1.0.lua"/>
+
+	<Include file="Poncho-2.0\Poncho-2.0.xml"/>
+	
+  	<Script file="Sushi-3.1\Sushi-3.1.lua"/>
+	<Script file="Sushi-3.1\classes\core\callable.lua"/>
+	<Script file="Sushi-3.1\classes\core\tipped.lua"/>
+	<Script file="Sushi-3.1\classes\core\labeled.lua"/>
+	<Script file="Sushi-3.1\classes\buttons\clickable.lua"/>
+	<Script file="Sushi-3.1\classes\buttons\texted.lua"/>
+	<Script file="Sushi-3.1\classes\checks\check.lua"/>
 </Ui>

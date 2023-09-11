@@ -1,37 +1,23 @@
 --[[
-Copyright 2009-2021 João Cardoso
-Blitz is distributed under the terms of the GNU General Public License (or the Lesser GPL).
-This file is part of Blitz.
-
-Blitz is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-Blitz is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with Blitz. If not, see <http://www.gnu.org/licenses/>.
+Copyright 2009-2023 João Cardoso
+All Rights Reserved
 --]]
 
 local Sushi = LibStub('Sushi-3.1')
 local Options = Blitz:NewModule('Options', Sushi.OptionsGroup('Blitz|TInterface/PVPFrame/Icons/prestige-icon-4-1:16:16:0:0|t'))
 local L = Blitz.Locals
 
-local PATRONS = {{title='Jenkins',people={'Gnare','Justin Rusbatch'}},{},{title='Ambassador',people={'Fernando Bandeira','Julia F','Lolari ','Craig Falb','Mónica Sanchez Calzado','Denny Hyde','Lynx','Owen Pitcairn','Rafael Lins','Mediocre Monk'}}} -- generated patron list
-local FOOTER = 'Copyright 2008-2021 João Cardoso'
+local PATRONS = {{},{title='Jenkins',people={'Gnare','Seventeen','Justin Hall','Debora S Ogormanw','Johnny Rabbit'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Dodgen','Kopernikus ','Ptsdthegamer','Burt Humburg','Kelly Wolf','Adam Mann','Christie Hopkins','Bc Spear','Jury ','Tigran Andrew','Jeffrey Jones','Swallow@area52','Peter Hollaubek','Bobby Pagiazitis','Michael Kinasz','Sam Ramji','Syed Hamdani','Raidek ','Thinkdesigner '}}} -- generated patron list
+local FOOTER = 'Copyright 2008-2023 João Cardoso'
 
 
 --[[ Startup ]]--
 
 function Options:OnEnable()
-	local credits = Sushi.CreditsGroup(self, PATRONS)
-	credits:SetSubtitle(nil, 'http://www.patreon.com/jaliborc')
+	local credits = LibStub('Sushi-3.1').CreditsGroup(self, PATRONS, 'Patrons |TInterface/Addons/Blitz/art/patreon:12:12|t')
+	credits:SetSubtitle(L.Supporters:format('|cFFF96854patreon.com/jaliborc|r'), 'http://www.patreon.com/jaliborc')
 	credits:SetFooter(FOOTER)
-
+	
 	self:SetFooter(FOOTER)
 	self:SetSubtitle(L.Description)
 	self:SetChildren(self.OnPopulate)

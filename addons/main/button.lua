@@ -1,31 +1,16 @@
 --[[
-Copyright 2009-2021 João Cardoso
-Blitz is distributed under the terms of the GNU General Public License (or the Lesser GPL).
-This file is part of Blitz.
-
-Blitz is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-Blitz is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with Blitz. If not, see <http://www.gnu.org/licenses/>.
+Copyright 2009-2023 João Cardoso
+All Rights Reserved
 --]]
 
 local ADDON, Addon = ...
-local Button = Addon:NewModule('Button', CreateFrame('CheckButton', 'Blitz', ImmersionContentFrame or QuestFrame, 'OptionsSmallCheckButtonTemplate'))
+local Button = Addon:NewModule('Button', LibStub('Sushi-3.1').Check(QuestFrame))--ImmersionContentFrame or QuestFrame))
 
 
 --[[ Startup ]]--
 
 function Button:OnEnable()
-  self:SetScript('OnClick', self.OnClick)
-  self:SetFontString(_G[self:GetName() .. 'Text'])
+  self:SetCall('OnClick', self.OnClick)
   self:SetText(Addon.Locals.AutomateQuest)
   self:RegisterEvent('QUEST_DETAIL', 'UpdateOffer')
   self:RegisterEvent('QUEST_PROGRESS', 'UpdateActive')
@@ -63,15 +48,15 @@ end
 function Button:UpdateButton(active)
 	local id = GetQuestID()
 	local repeatable = C_QuestLog.IsRepeatableQuest and C_QuestLog.IsRepeatableQuest(id)
-                        or active and not C_QuestLog.IsOnQuest(id)
+						or active and not C_QuestLog.IsOnQuest(id)
 
 	if self:IsPeriodic() or repeatable then
 		self:SetChecked(Addon:IsEnabled(id) and true)
 		self:Show()
 
-    if Addon.sets.tutorials ~= 2 and LoadAddOn(ADDON .. '_Config') then
-  		Addon.Tutorials:Show()
-  	end
+		if Addon.sets.tutorials ~= 2 and LoadAddOn(ADDON .. '_Config') then
+			Addon.Tutorials:Show()
+		end
 	else
 		self:Hide()
 	end
