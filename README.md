@@ -10,4 +10,4 @@ Blitzcan automatically accept and deliver quests for you. It is a no-nonsense an
 
 Complete quests faster and stop wasting time.
 
-![Progress Bar](http://jaliborc.com/media/addons/large/blitz/progress.webp)
+![Progress Bar](http://jaliborc.com/media/addons/large/blitz/progress.webp#1)
