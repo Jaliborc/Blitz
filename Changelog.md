@@ -1,3 +1,6 @@
+##### 10.1
+* Wrath TOC update.
+
 #### 10
 * Updated for Dragonflight, Wrath Classic and Vanilla Era servers.
 * Significant localization update, now available in all WoW supported locales.
