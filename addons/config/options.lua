@@ -1,14 +1,14 @@
 --[[
-Copyright 2009-2023 João Cardoso
+Copyright 2009-2024 João Cardoso
 All Rights Reserved
 --]]
 
 local Sushi = LibStub('Sushi-3.1')
-local Options = Blitz:NewModule('Options', Sushi.OptionsGroup('Blitz|TInterface/PVPFrame/Icons/prestige-icon-4-1:16:16:0:0|t'))
+local Options = Blitz:NewModule('Options', Sushi.OptionsGroup('|TInterface/PVPFrame/Icons/prestige-icon-4-1:16:16:0:0|t Blitz'))
 local L = Blitz.Locals
 
-local PATRONS = {{},{title='Jenkins',people={'Gnare','Adcantu','Justin Hall','Debora S Ogormanw','Johnny Rabbit'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Dodgen','Kopernikus ','Ptsdthegamer','Burt Humburg','Adam Mann','Christie Hopkins','Bc Spear','Jury ','Tigran Andrew','Jeffrey Jones','Swallow@area52','Peter Hollaubek','Michael Kinasz','Kelly Wolf','Sam Ramji','Syed Hamdani','Raidek ','Thinkdesigner '}}} -- generated patron list
-local FOOTER = 'Copyright 2008-2023 João Cardoso'
+local PATRONS = {{title='Jenkins',people={'Gnare','Adcantu','Justin Hall','Debora S Ogormanw','Johnny Rabbit','Francesco Rollo'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Dodgen','Ptsdthegamer','Burt Humburg','Adam Mann','Bc Spear','Jury ','Tigran Andrew','Swallow@area52','Peter Hollaubek','Michael Kinasz','Kelly Wolf','Kopernikus ','Metadata','Ds9293','Charles Howarth','Lyta ','נעמי מקינו','Melinani King'}}} -- generated patron list
+local FOOTER = 'Copyright 2008-2024 João Cardoso'
 
 
 --[[ Startup ]]--

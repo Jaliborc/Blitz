@@ -1,5 +1,11 @@
-##### 10.1
-* Wrath TOC update.
+##### 10.2.1
+* Can now be detected by Cataclysm client.
+
+##### 10.2
+* Retail: TOC update.
+
+#### 10.1
+* Wrath: TOC update.
 
 #### 10
 * Updated for Dragonflight, Wrath Classic and Vanilla Era servers.
