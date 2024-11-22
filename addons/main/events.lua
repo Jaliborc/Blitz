@@ -75,7 +75,7 @@ function Events:QUEST_COMPLETE()
 			if GetNumQuestChoices() == 0 or item > 0 then
 				GetQuestReward(item)
 
-				if skips > 1 and LoadAddOn('Blitz_Progress') then
+				if skips > 1 and self:LoadModule('Progress') then
 					Blitz.Progress:ShowQuest(id, data, skips)
 				end
 			elseif data then

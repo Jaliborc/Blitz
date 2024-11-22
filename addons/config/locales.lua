@@ -3,8 +3,8 @@ local Language = GetLocale()
 
 -- Portuguese --
 if Language == 'ptBR' then
-    L.Description = "Por padrão, o Blitz automatiza apenas missões diárias e repetíveis de sua escolha. Essas opções permitem que você mude quando e quais missões ele automatiza."
-    L.Supporters = "O Blitz é distribuído gratuitamente e é sustentado através de doações. Um enorme agradecimento a todos os apoiadores no Patreon e Paypal que mantêm o desenvolvimento ativo. Você também pode se tornar um patrono em %s."
+    L.GeneralDescription = "Por padrão, o Blitz automatiza apenas missões diárias e repetíveis de sua escolha. Essas opções permitem que você mude quando e quais missões ele automatiza."
+    L.PatronsDescription = "O Blitz é distribuído gratuitamente e é sustentado através de doações. Um enorme agradecimento a todos os apoiadores no Patreon e Paypal que mantêm o desenvolvimento ativo. Você também pode se tornar um patrono em |cFFF96854patreon.com/jaliborc|r."
 
     L.Welcome = "Bem-vindo ao Blitz!"
     L.Tutorial1 = "Você está usando o |cffffd200Blitz|r, de |cffffd200Jaliborc|r, um addon que aceita e entrega missões automaticamente para você.|n|nPor padrão, o |cffffd200Blitz|r automatiza apenas missões diárias, semanais e repetíveis de sua escolha. Você pode selecioná-las clicando no botão |cffffd200Automatizar Missão|r ao falar com o doador da missão."
@@ -26,8 +26,8 @@ if Language == 'ptBR' then
 
 -- Spanish --
 elseif Language == 'esES' or Language == 'esMX' then
-    L.Description = "Por defecto, Blitz sólo automatiza misiones diarias y repetibles de tu elección. Estas opciones te permiten cambiar cuándo y qué misiones automatiza."
-    L.Supporters = "Blitz se distribuye de forma gratuita y se mantiene a través de donaciones. Un enorme agradecimiento a todos los patrocinadores en Patreon y Paypal que mantienen vivo el desarrollo. También puedes convertirte en patrocinador en %s."
+    L.GeneralDescription = "Por defecto, Blitz sólo automatiza misiones diarias y repetibles de tu elección. Estas opciones te permiten cambiar cuándo y qué misiones automatiza."
+    L.PatronsDescription = "Blitz se distribuye de forma gratuita y se mantiene a través de donaciones. Un enorme agradecimiento a todos los patrocinadores en Patreon y Paypal que mantienen vivo el desarrollo. También puedes convertirte en patrocinador en |cFFF96854patreon.com/jaliborc|r."
 
     L.Welcome = "¡Bienvenido a Blitz!"
     L.Tutorial1 = "Ahora estás usando |cffffd200Blitz|r, de |cffffd200Jaliborc|r, un complemento que acepta y entrega misiones automáticamente para ti.|n|nPor defecto, |cffffd200Blitz|r sólo automatiza misiones diarias, semanales y repetibles de tu elección. Puedes seleccionarlas haciendo clic en el botón |cffffd200Automatizar Misión|r cuando hables con el proveedor de la misión."
@@ -49,8 +49,8 @@ elseif Language == 'esES' or Language == 'esMX' then
 
 -- German --
 elseif Language == 'deDE' then
-    L.Description = "Standardmäßig automatisiert Blitz nur tägliche und wiederholbare Quests deiner Wahl. Diese Optionen ermöglichen es dir, zu ändern, wann und welche Quests automatisiert werden."
-    L.Supporters = "Blitz wird kostenlos verteilt und durch Spenden unterstützt. Ein riesiges Dankeschön an alle Unterstützer auf Patreon und Paypal, die die Entwicklung am Leben erhalten. Du kannst auch ein Patron werden unter %s."
+    L.GeneralDescription = "Standardmäßig automatisiert Blitz nur tägliche und wiederholbare Quests deiner Wahl. Diese Optionen ermöglichen es dir, zu ändern, wann und welche Quests automatisiert werden."
+    L.PatronsDescription = "Blitz wird kostenlos verteilt und durch Spenden unterstützt. Ein riesiges Dankeschön an alle Unterstützer auf Patreon und Paypal, die die Entwicklung am Leben erhalten. Du kannst auch ein Patron werden unter |cFFF96854patreon.com/jaliborc|r."
 
     L.Welcome = "Willkommen bei Blitz!"
     L.Tutorial1 = "Du benutzt jetzt |cffffd200Blitz|r von |cffffd200Jaliborc|r, ein Addon, das automatisch Quests für dich annimmt und abgibt.|n|nStandardmäßig automatisiert |cffffd200Blitz|r nur tägliche, wöchentliche und wiederholbare Quests deiner Wahl. Du kannst sie auswählen, indem du auf die |cffffd200Quest automatisieren|r Schaltfläche klickst, wenn du mit dem Questgeber sprichst."
@@ -72,8 +72,8 @@ elseif Language == 'deDE' then
 
 -- Italian --
 elseif Language == 'itIT' then
-    L.Description = "Di default, Blitz automatizza solo missioni quotidiane e ripetibili a tua scelta. Queste opzioni ti permettono di cambiare quando e quali missioni vengono automatizzate."
-    L.Supporters = "Blitz è distribuito gratuitamente e supportato attraverso donazioni. Un enorme ringraziamento a tutti i sostenitori su Patreon e Paypal che mantengono vivo lo sviluppo. Anche tu puoi diventare un patrono su %s."
+    L.GeneralDescription = "Di default, Blitz automatizza solo missioni quotidiane e ripetibili a tua scelta. Queste opzioni ti permettono di cambiare quando e quali missioni vengono automatizzate."
+    L.PatronsDescription = "Blitz è distribuito gratuitamente e supportato attraverso donazioni. Un enorme ringraziamento a tutti i sostenitori su Patreon e Paypal che mantengono vivo lo sviluppo. Anche tu puoi diventare un patrono su |cFFF96854patreon.com/jaliborc|r."
 
     L.Welcome = "Benvenuto in Blitz!"
     L.Tutorial1 = "Ora stai usando |cffffd200Blitz|r, di |cffffd200Jaliborc|r, un addon che accetta e consegna automaticamente missioni per te.|n|nDi default, |cffffd200Blitz|r automatizza solo missioni quotidiane, settimanali e ripetibili a tua scelta. Puoi selezionarle cliccando sul pulsante |cffffd200Automatizza Missione|r quando parli con il donatore della missione."
@@ -95,8 +95,8 @@ elseif Language == 'itIT' then
 
 -- French --
 elseif Language =='frFR' then
-	L.Description = "Par défaut, Blitz n'automatise que les quêtes journalières et répétables de votre choix. Ces options vous permettent de changer quelles quêtes et quand il les automatise."
-	L.Supporters = "Blitz est distribué gratuitement et est soutenu par des donations. Un grand merci à tous les supporters sur Patreon et Paypal qui maintiennent le développement. Vous pouvez devenir un patron également à %s."
+	L.GeneralDescription = "Par défaut, Blitz n'automatise que les quêtes journalières et répétables de votre choix. Ces options vous permettent de changer quelles quêtes et quand il les automatise."
+	L.PatronsDescription = "Blitz est distribué gratuitement et est soutenu par des donations. Un grand merci à tous les supporters sur Patreon et Paypal qui maintiennent le développement. Vous pouvez devenir un patron également à |cFFF96854patreon.com/jaliborc|r."
 	
 	L.Welcome = "Bienvenue dans Blitz!"
 	L.Tutorial1 = "Vous utilisez désormais |cffffd200Blitz|r, de |cffffd200Jaliborc|r, un addon qui accepte et rend automatiquement les quêtes pour vous.|n|nPar défaut, |cffffd200Blitz|r n'automatise que les quêtes journalières, hebdomadaires et répétables de votre choix. Vous pouves les sélectionner en cliquant sur le bouton |cffffd200Automatiser Quête|r en parlant au donneur de quête."
@@ -118,8 +118,8 @@ elseif Language =='frFR' then
 
 -- Traditional Chinese --
 elseif Language == 'zhTW' then
-    L.Description = "Blitz預設僅接受每日或重複任務，此選項可以調整設定。"
-    L.Supporters = "Blitz是免費發佈的，並通過捐款獲得支持。在Patreon和Paypal上的所有支持者都非常感謝，他們讓這個項目能夠持續發展。您也可以在%s成為其中一員。"
+    L.GeneralDescription = "Blitz預設僅接受每日或重複任務，此選項可以調整設定。"
+    L.PatronsDescription = "Blitz是免費發佈的，並通過捐款獲得支持。在Patreon和Paypal上的所有支持者都非常感謝，他們讓這個項目能夠持續發展。您也可以在%s成為其中一員。"
 
     L.Welcome = "歡迎使用Blitz!"
     L.Tutorial1 = "您正在使用由 |cffffd200Jaliborc|r 創作的 |cffffd200Blitz|r 插件|n|n 在預設情況下 |cffffd200Blitz|r 僅自動接受每日任務、每週任務或重複任務，您可在任務給予者畫面點擊 |cffffd200自動任務|r 按鈕來開啟功能。"
@@ -141,8 +141,8 @@ elseif Language == 'zhTW' then
 
 -- Simplified Chinese --
 elseif Language == 'zhCN' then
-    L.Description = "Blitz预设仅接受每日或重复任务，此选项可以调整设定。"
-    L.Supporters = "Blitz是免费发布的，并通过捐款获得支持。在Patreon和Paypal上的所有支持者都非常感谢，他们让这个项目能够持续发展。您也可以在%s成为其中一员。"
+    L.GeneralDescription = "Blitz预设仅接受每日或重复任务，此选项可以调整设定。"
+    L.PatronsDescription = "Blitz是免费发布的，并通过捐款获得支持。在Patreon和Paypal上的所有支持者都非常感谢，他们让这个项目能够持续发展。您也可以在%s成为其中一员。"
 
     L.Welcome = "欢迎使用Blitz!"
     L.Tutorial1 = "您正在使用由 |cffffd200Jaliborc|r 创作的 |cffffd200Blitz|r 插件|n|n 在预设情况下 |cffffd200Blitz|r 仅自动接受日常任务、周常任务或重复任务，您可在任务给予者画面点击 |cffffd200自动任务|r 按钮来开启功能。"
@@ -164,8 +164,8 @@ elseif Language == 'zhCN' then
 
 -- Korean
 elseif Language == 'koKR' then
-    L.Description = "기본적으로 Blitz는 당신이 선택한 일일 및 반복 퀘스트만 자동화합니다. 이 옵션을 사용하면 언제, 어떤 퀘스트를 자동화할지 변경할 수 있습니다."
-    L.Supporters = "Blitz는 무료로 배포되며 기부를 통해 지원됩니다. Patreon과 Paypal에서 지원해 주신 모든 분께 깊은 감사를 드립니다. %s에서 후원자가 될 수도 있습니다."
+    L.GeneralDescription = "기본적으로 Blitz는 당신이 선택한 일일 및 반복 퀘스트만 자동화합니다. 이 옵션을 사용하면 언제, 어떤 퀘스트를 자동화할지 변경할 수 있습니다."
+    L.PatronsDescription = "Blitz는 무료로 배포되며 기부를 통해 지원됩니다. Patreon과 Paypal에서 지원해 주신 모든 분께 깊은 감사를 드립니다. %s에서 후원자가 될 수도 있습니다."
 
     L.Welcome = "Blitz에 오신 것을 환영합니다!"
     L.Tutorial1 = "당신은 지금 |cffffd200Jaliborc|r의 |cffffd200Blitz|r 애드온을 사용하고 있습니다.|n|n기본적으로 |cffffd200Blitz|r는 당신이 선택한 일일, 주간, 반복 퀘스트만 자동화합니다. 퀘스트 제공자와 대화할 때 |cffffd200퀘스트 자동화|r 버튼을 클릭하여 선택할 수 있습니다."
@@ -187,8 +187,8 @@ elseif Language == 'koKR' then
 	
 -- Russian --
 elseif Language =='ruRU' then
-	L.Description = "По умолчанию, Блиц только автоматизирует каждодневные и повторяющиеся задания. Эти настройки позволяют Вам изменить поведение Блица - когда и какие задания он будет автоматизировать."
-	L.Supporters = "Блиц распространяется бесплатно и поддерживается через пожертвования. Огромное спасибо всем поддерживающим на Patreon и Paypal, которые поддерживают разработку. Вы тоже можете стать покровителем на %s."
+	L.GeneralDescription = "По умолчанию, Блиц только автоматизирует каждодневные и повторяющиеся задания. Эти настройки позволяют Вам изменить поведение Блица - когда и какие задания он будет автоматизировать."
+	L.PatronsDescription = "Блиц распространяется бесплатно и поддерживается через пожертвования. Огромное спасибо всем поддерживающим на Patreon и Paypal, которые поддерживают разработку. Вы тоже можете стать покровителем на |cFFF96854patreon.com/jaliborc|r."
 	
 	L.Welcome = "Добро пожаловать в Блиц!"
 	L.Tutorial1 = "Теперь Вы используете |cffffd200Блиц|r, от |cffffd200Jaliborc|r, аддон, который автоматически получает и сдает задания за Вас.|n|nПо умолчанию, |cffffd200Блиц|r автоматизирует только ежедневные, еженедельные и повторяющиеся задания по Вашему выбору. Вы можете выбирать их, кликнув на кнопке |cffffd200Автоматизировать задание|r, когда разговариваете с квестодателем."
@@ -210,8 +210,8 @@ elseif Language =='ruRU' then
 
 -- English --
 else
-	L.Description = 'By default, Blitz only automates daily and repeatable quests of your choice. These options allow you to change when and which quests it automates.'
-	L.Supporters = 'Blitz is distributed for free and supported trough donations. A massive thank you to all the supporters on Patreon and Paypal who keep development alive. You can become a patron too at %s.'
+	L.GeneralDescription = 'By default, Blitz only automates daily and repeatable quests of your choice. These options allow you to change when and which quests it automates.'
+    L.PatronsDescription = 'Blitz is distributed for free and supported trough donations. A massive thank you to all the supporters on Patreon and Paypal who keep development alive. You can become a patron too at |cFFF96854patreon.com/jaliborc|r.'
 
 	L.Welcome = 'Welcome to Blitz!'
 	L.Tutorial1 = 'You are now using |cffffd200Blitz|r, by |cffffd200Jaliborc|r, an addon which automatically accepts and delivers quests for you.|n|nBy default, |cffffd200Blitz|r only automates daily, weekly and repeatable quests of your choice. You can select them by clicking on the |cffffd200Automate Quest|r button when talking to the quest giver.'

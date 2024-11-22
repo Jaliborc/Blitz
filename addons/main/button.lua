@@ -4,7 +4,7 @@ All Rights Reserved
 --]]
 
 local ADDON, Addon = ...
-local Button = Addon:NewModule('Button', LibStub('Sushi-3.1').Check(QuestFrame))--ImmersionContentFrame or QuestFrame))
+local Button = Addon:NewModule('Button', LibStub('Sushi-3.2').Check(QuestFrame))
 
 
 --[[ Startup ]]--
@@ -54,7 +54,7 @@ function Button:UpdateButton(active)
 		self:SetChecked(Addon:IsEnabled(id) and true)
 		self:Show()
 
-		if Addon.sets.tutorials ~= 2 and LoadAddOn(ADDON .. '_Config') then
+		if Addon.sets.tutorials ~= 2 and Addon:LoadModule('_Config') then
 			Addon.Tutorials:Show()
 		end
 	else

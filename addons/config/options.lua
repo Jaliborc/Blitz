@@ -3,34 +3,27 @@ Copyright 2009-2024 João Cardoso
 All Rights Reserved
 --]]
 
-local Sushi = LibStub('Sushi-3.1')
+local Sushi = LibStub('Sushi-3.2')
 local Options = Blitz:NewModule('Options', Sushi.OptionsGroup('|TInterface/PVPFrame/Icons/prestige-icon-4-1:16:16:0:0|t Blitz'))
 local L = Blitz.Locals
 
-local PATRONS = {{title='Jenkins',people={'Gnare','Adcantu','Justin Hall','Debora S Ogormanw','Johnny Rabbit','Francesco Rollo'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Dodgen','Ptsdthegamer','Burt Humburg','Adam Mann','Bc Spear','Jury ','Tigran Andrew','Swallow@area52','Peter Hollaubek','Michael Kinasz','Kelly Wolf','Kopernikus ','Metadata','Ds9293','Charles Howarth','Lyta ','נעמי מקינו','Melinani King'}}} -- generated patron list
+local PATRONS = {{title='Jenkins',people={'Gnare','Debora S Ogormanw','Johnny Rabbit','Shaun Potts'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Dodgen','Ptsdthegamer','Adam Mann','Bc Spear','Jury ','Swallow@area52','Peter Hollaubek','Michael Kinasz','Metadata','Ds9293','Kelly Wolf','Charles Howarth','Lisa','M Prieto','נעמי מקינו'}}} -- generated patron list
+local PATREON_ICON = '  |TInterface/Addons/Blitz/art/patreon:12:12|t'
 local FOOTER = 'Copyright 2008-2024 João Cardoso'
 
 
 --[[ Startup ]]--
 
 function Options:OnEnable()
-	local credits = LibStub('Sushi-3.1').CreditsGroup(self, PATRONS, 'Patrons |TInterface/Addons/Blitz/art/patreon:12:12|t')
-	credits:SetSubtitle(L.Supporters:format('|cFFF96854patreon.com/jaliborc|r'), 'http://www.patreon.com/jaliborc')
-	credits:SetFooter(FOOTER)
+	self.Credits = Sushi.OptionsGroup(self, 'Patrons' .. PATREON_ICON)
+		:SetSubtitle(L.PatronsDescription):SetFooter(FOOTER):SetOrientation('HORIZONTAL'):SetChildren(self.OnCredits)
 	
 	self:SetFooter(FOOTER)
-	self:SetSubtitle(L.Description)
-	self:SetChildren(self.OnPopulate)
-	self:SetCall('OnDefaults', self.OnDefaults)
+	self:SetSubtitle(L.GeneralDescription)
+	self:SetCall('OnChildren', self.OnMain)
 end
 
-function Options:OnDefaults()
-	Blitz_Sets = nil
-	Blitz:OnSettings()
-	self:Update()
-end
-
-function Options:OnPopulate()
+function Options:OnMain()
 	self:AddInput('Check', 'accept', 'Accept')
 	self:AddInput('Check', 'deliver', 'Deliver')
 
@@ -47,6 +40,24 @@ function Options:OnPopulate()
 		{key = 'Shift', text = SHIFT_KEY},
 		{key = false, text = NONE_KEY},
 	}
+end
+
+function Options:OnCredits()
+	for i, rank in ipairs(PATRONS) do
+		if rank.people then
+			self:Add('Header', rank.title, GameFontHighlight, true).top = i > 1 and 20 or 0
+
+			for j, name in ipairs(rank.people) do
+				self:Add('Header', name, i > 1 and GameFontHighlight or GameFontHighlightLarge):SetWidth(180)
+			end
+		end
+	end
+
+	self:AddBreak()
+	self:Add('RedButton', 'Join Us'):SetWidth(200):SetCall('OnClick', function()
+		Sushi.Popup:External('patreon.com/jaliborc')
+		SettingsPanel:Close(true)
+	end).top = 20
 end
 
 
