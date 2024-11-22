@@ -7,6 +7,6 @@
 
 ## OptionalDeps: Immersion
 ## SavedVariables: Blitz_Sets
-## Interface: 100206
+## Interface: 110005
 
 addons\main\main.xml
