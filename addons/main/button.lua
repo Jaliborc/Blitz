@@ -1,5 +1,5 @@
 --[[
-Copyright 2009-2024 João Cardoso
+Copyright 2009-2025 João Cardoso
 All Rights Reserved
 --]]
 
@@ -9,7 +9,7 @@ local Button = Addon:NewModule('Button', LibStub('Sushi-3.2').Check(QuestFrame))
 
 --[[ Startup ]]--
 
-function Button:OnEnable()
+function Button:OnLoad()
   self:SetCall('OnClick', self.OnClick)
   self:SetText(Addon.Locals.AutomateQuest)
   self:RegisterEvent('QUEST_DETAIL', 'UpdateOffer')

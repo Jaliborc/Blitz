@@ -1,5 +1,5 @@
 --[[
-Copyright 2009-2024 João Cardoso
+Copyright 2009-2025 João Cardoso
 All Rights Reserved
 --]]
 
@@ -10,7 +10,7 @@ local S, BIG = Addon.Server, 2^10000
 
 --[[ Startup ]]--
 
-function Events:OnEnable()
+function Events:OnLoad()
   self:RegisterEvent('GOSSIP_SHOW')
   self:RegisterEvent('QUEST_GREETING')
   self:RegisterEvent('QUEST_DETAIL')
@@ -75,7 +75,7 @@ function Events:QUEST_COMPLETE()
 			if GetNumQuestChoices() == 0 or item > 0 then
 				GetQuestReward(item)
 
-				if skips > 1 and self:LoadModule('Progress') then
+				if skips > 1 and Addon:LoadModule('Progress') then
 					Blitz.Progress:ShowQuest(id, data, skips)
 				end
 			elseif data then

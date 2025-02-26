@@ -1,3 +1,11 @@
+### 11.1.1
+* Retail: Updated for Undermined game patch.
+* Retail: Added support for the new addon list native grouping capabilities.
+* All: Upgraded to WildAddon-1.1.
+
+### 11.1
+* Updated Blitz Progress to The War Within.
+
 ## 11
 * Now uses C_Everywhere for safer multi-client support.
 * Updated to Sushi-3.2.

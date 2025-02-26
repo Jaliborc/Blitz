@@ -1,5 +1,5 @@
 --[[
-Copyright 2009-2024 João Cardoso
+Copyright 2009-2025 João Cardoso
 All Rights Reserved
 --]]
 
@@ -28,7 +28,7 @@ function Progress:Startup()
 	self.Background.Patch:SetTexture('Interface/Addons/Blitz/art/background-patch')
 	self.Background.Patch:SetPoint('CENTER', self.Background, 104, -20)
 
-	self.PortraitBorder = self:CreateTexture(nil, 'OVERLAY', 7)
+	self.PortraitBorder = self:CreateTexture(nil, 'OVERLAY', nil, 7)
 	self.PortraitBorder:SetTexture('Interface/AchievementFrame/UI-Achievement-IconFrame')
 	self.PortraitBorder:SetTexCoord(0.5625, 0, 0, 0.5625)
 	self.PortraitBorder:SetPoint('TOPRIGHT', 0, -7)
@@ -53,12 +53,12 @@ function Progress:Startup()
 	self.Arrow:SetPoint('CENTER', 1, -2)
 	self.Arrow:SetSize(190, 50)
 
-	self.Arrow.Fill = self:CreateTexture(nil, 'OVERLAY', 5)
+	self.Arrow.Fill = self:CreateTexture(nil, 'OVERLAY', nil, 5)
 	self.Arrow.Fill:SetTexture('Interface/Addons/Blitz/art/arrow-fill')
 	self.Arrow.Fill:SetPoint('LEFT', self.Arrow)
 	self.Arrow.Fill:SetHeight(50)
 
-	self.Arrow.Spark = self:CreateTexture(nil, 'OVERLAY', 6)
+	self.Arrow.Spark = self:CreateTexture(nil, 'OVERLAY', nil, 6)
 	self.Arrow.Spark:SetTexture('Interface/CastingBar/UI-CastingBar-Spark')
 	self.Arrow.Spark:SetPoint('RIGHT', self.Arrow.Fill, 8, 0)
 	self.Arrow.Spark:SetBlendMode('ADD')
@@ -77,7 +77,7 @@ function Progress:Display(id, items, numDelivers)
 	local item, amount = Progress:GetWorseItem(items)
 
 	SetPortraitTexture(self.Portrait, 'NPC')
-	self.Unlocked:SetText(C_QuestLog.GetQuestInfo(id))
+	self.Unlocked:SetText((C_QuestLog.GetTitleForQuestID or C_QuestLog.GetQuestInfo)(id))
 	self.Icon.Texture:SetTexture(GetItemIcon(item))
 	self.Icon.Count:SetText(format('%s/%s', GetItemCount(item) or '?', amount or '?'))
 	self.Arrow.Fill:SetTexCoord(0, progress, 0, 1)

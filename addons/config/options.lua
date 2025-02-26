@@ -1,5 +1,5 @@
 --[[
-Copyright 2009-2024 João Cardoso
+Copyright 2009-2025 João Cardoso
 All Rights Reserved
 --]]
 
@@ -7,14 +7,14 @@ local Sushi = LibStub('Sushi-3.2')
 local Options = Blitz:NewModule('Options', Sushi.OptionsGroup('|TInterface/PVPFrame/Icons/prestige-icon-4-1:16:16:0:0|t Blitz'))
 local L = Blitz.Locals
 
-local PATRONS = {{title='Jenkins',people={'Gnare','Debora S Ogormanw','Johnny Rabbit','Shaun Potts'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Dodgen','Ptsdthegamer','Adam Mann','Bc Spear','Jury ','Swallow@area52','Peter Hollaubek','Michael Kinasz','Metadata','Ds9293','Kelly Wolf','Charles Howarth','Lisa','M Prieto','נעמי מקינו'}}} -- generated patron list
+local PATRONS = {{title='Jenkins',people={'Gnare','Debora S Ogormanw','Johnny Rabbit','Shaun Potts','Dean Cutsforth'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Ptsdthegamer','Swallow@area52','Adam Mann','Bc Spear','Jury ','Peter Hollaubek','Michael Kinasz','Lisa','M Prieto','Ronald Platz'}}} -- generated patron list
 local PATREON_ICON = '  |TInterface/Addons/Blitz/art/patreon:12:12|t'
-local FOOTER = 'Copyright 2008-2024 João Cardoso'
+local FOOTER = 'Copyright 2008-2025 João Cardoso'
 
 
 --[[ Startup ]]--
 
-function Options:OnEnable()
+function Options:OnLoad()
 	self.Credits = Sushi.OptionsGroup(self, 'Patrons' .. PATREON_ICON)
 		:SetSubtitle(L.PatronsDescription):SetFooter(FOOTER):SetOrientation('HORIZONTAL'):SetChildren(self.OnCredits)
 	

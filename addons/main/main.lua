@@ -1,25 +1,24 @@
 --[[
-Copyright 2009-2024 João Cardoso
+Copyright 2009-2025 João Cardoso
 All Rights Reserved
 --]]
 
 local ADDON, Addon = ...
 local C = LibStub('C_Everywhere')
-local Blitz = LibStub('WildAddon-1.0'):NewAddon(ADDON, Addon)
+local Blitz = LibStub('WildAddon-1.1'):NewAddon(ADDON, Addon)
 
 
 --[[ Startup ]]--
 
-function Blitz:OnEnable()
+function Blitz:OnLoad()
 	CreateFrame('Frame', nil, SettingsPanel or InterfaceOptionsFrame)
 		:SetScript('OnShow', function() self:LoadModule('Config') end)
 
-	Blitz_Sets = Blitz_Sets or {quests = {}, key = 'Shift'}
+	Blitz_Sets = self:SetDefaults(Blitz_Sets or {}, {quests = {}, key = 'Shift'})
 	self.sets = Blitz_Sets
 end
 
 function Blitz:LoadModule(name)
-	C.AddOns.EnableAddOn(ADDON ..'_'.. name)
 	return C.AddOns.LoadAddOn(ADDON ..'_'.. name)
 end
 
