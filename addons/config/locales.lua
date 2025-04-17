@@ -3,95 +3,95 @@ local Language = GetLocale()
 
 -- Portuguese --
 if Language == 'ptBR' then
-    L.GeneralDescription = "Por padrão, o Blitz automatiza apenas missões diárias e repetíveis de sua escolha. Essas opções permitem que você mude quando e quais missões ele automatiza."
-    L.PatronsDescription = "O Blitz é distribuído gratuitamente e é sustentado através de doações. Um enorme agradecimento a todos os apoiadores no Patreon e Paypal que mantêm o desenvolvimento ativo. Você também pode se tornar um patrono em |cFFF96854patreon.com/jaliborc|r."
+	L.GeneralDescription = "Por padrão, o Blitz automatiza apenas missões diárias e repetíveis de sua escolha. Essas opções permitem que você mude quando e quais missões ele automatiza."
+	L.PatronsDescription = "O Blitz é distribuído gratuitamente e é sustentado através de doações. Um enorme agradecimento a todos os apoiadores no Patreon e Paypal que mantêm o desenvolvimento ativo. Você também pode se tornar um patrono em |cFFF96854patreon.com/jaliborc|r."
 
-    L.Welcome = "Bem-vindo ao Blitz!"
-    L.Tutorial1 = "Você está usando o |cffffd200Blitz|r, de |cffffd200Jaliborc|r, um addon que aceita e entrega missões automaticamente para você.|n|nPor padrão, o |cffffd200Blitz|r automatiza apenas missões diárias, semanais e repetíveis de sua escolha. Você pode selecioná-las clicando no botão |cffffd200Automatizar Missão|r ao falar com o doador da missão."
-    L.Tutorial2 = "E se você quiser que o Blitz entregue todas as missões concluídas para você, não apenas as diárias? Ou para selecionar automaticamente a recompensa mais valiosa?|n|nEssas e muitas outras opções estão disponíveis no |cffffd200Menu do Jogo|r em |cffffd200Opções de Interface|r."
+	L.Welcome = "Bem-vindo ao Blitz!"
+	L.Tutorial1 = "Você está usando o |cffffd200Blitz|r, de |cffffd200Jaliborc|r, um addon que aceita e entrega missões automaticamente para você.|n|nPor padrão, o |cffffd200Blitz|r automatiza apenas missões diárias, semanais e repetíveis de sua escolha. Você pode selecioná-las clicando no botão |cffffd200Automatizar Missão|r ao falar com o doador da missão."
+	L.Tutorial2 = "E se você quiser que o Blitz entregue todas as missões concluídas para você, não apenas as diárias? Ou para selecionar automaticamente a recompensa mais valiosa?|n|nEssas e muitas outras opções estão disponíveis no |cffffd200Menu do Jogo|r em |cffffd200Opções de Interface|r."
 
-    L.Accept = "Aceitar Todas as Missões"
-    L.AcceptTip = "Se ativado, o Blitz aceitará qualquer missão disponível."
-    L.Deliver = "Entregar Missões Concluídas"
-    L.DeliverTip = "Se ativado, o Blitz entregará qualquer missão concluída."
-    L.SelectReward = "Selecionar Recompensa"
-    L.SelectRewardTip = "Se ativado, o Blitz escolherá automaticamente a recompensa mais valiosa ao entregar missões."
+	L.Accept = "Aceitar Todas as Missões"
+	L.AcceptTip = "Se ativado, o Blitz aceitará qualquer missão disponível."
+	L.Deliver = "Entregar Missões Concluídas"
+	L.DeliverTip = "Se ativado, o Blitz entregará qualquer missão concluída."
+	L.SelectReward = "Selecionar Recompensa"
+	L.SelectRewardTip = "Se ativado, o Blitz escolherá automaticamente a recompensa mais valiosa ao entregar missões."
 
-    L.Manual = "Requerir Tecla"
-    L.ManualTip = "Se ativado, as missões só serão automatizadas se você segurar a tecla abaixo."
-    L.AutomateKey = "Tecla de Automação"
-    L.AutomateKeyTip = "Segure para permitir que as missões sejam automatizadas."
-    L.ManualKey = "Tecla Manual"
-    L.ManualKeyTip = "Segure para evitar que as missões sejam automatizadas."
+	L.Manual = "Requerir Tecla"
+	L.ManualTip = "Se ativado, as missões só serão automatizadas se você segurar a tecla abaixo."
+	L.AutomateKey = "Tecla de Automação"
+	L.AutomateKeyTip = "Segure para permitir que as missões sejam automatizadas."
+	L.ManualKey = "Tecla Manual"
+	L.ManualKeyTip = "Segure para evitar que as missões sejam automatizadas."
 
 -- Spanish --
 elseif Language == 'esES' or Language == 'esMX' then
-    L.GeneralDescription = "Por defecto, Blitz sólo automatiza misiones diarias y repetibles de tu elección. Estas opciones te permiten cambiar cuándo y qué misiones automatiza."
-    L.PatronsDescription = "Blitz se distribuye de forma gratuita y se mantiene a través de donaciones. Un enorme agradecimiento a todos los patrocinadores en Patreon y Paypal que mantienen vivo el desarrollo. También puedes convertirte en patrocinador en |cFFF96854patreon.com/jaliborc|r."
+	L.GeneralDescription = "Por defecto, Blitz sólo automatiza misiones diarias y repetibles de tu elección. Estas opciones te permiten cambiar cuándo y qué misiones automatiza."
+	L.PatronsDescription = "Blitz se distribuye de forma gratuita y se mantiene a través de donaciones. Un enorme agradecimiento a todos los patrocinadores en Patreon y Paypal que mantienen vivo el desarrollo. También puedes convertirte en patrocinador en |cFFF96854patreon.com/jaliborc|r."
 
-    L.Welcome = "¡Bienvenido a Blitz!"
-    L.Tutorial1 = "Ahora estás usando |cffffd200Blitz|r, de |cffffd200Jaliborc|r, un complemento que acepta y entrega misiones automáticamente para ti.|n|nPor defecto, |cffffd200Blitz|r sólo automatiza misiones diarias, semanales y repetibles de tu elección. Puedes seleccionarlas haciendo clic en el botón |cffffd200Automatizar Misión|r cuando hables con el proveedor de la misión."
-    L.Tutorial2 = "¿Y si quieres que Blitz entregue todas las misiones completadas para ti, no sólo las diarias? ¿O para seleccionar automáticamente la recompensa más valiosa?|n|nEstas y muchas otras opciones están disponibles en el |cffffd200Menú del Juego|r en |cffffd200Opciones de Interfaz|r."
+	L.Welcome = "¡Bienvenido a Blitz!"
+	L.Tutorial1 = "Ahora estás usando |cffffd200Blitz|r, de |cffffd200Jaliborc|r, un complemento que acepta y entrega misiones automáticamente para ti.|n|nPor defecto, |cffffd200Blitz|r sólo automatiza misiones diarias, semanales y repetibles de tu elección. Puedes seleccionarlas haciendo clic en el botón |cffffd200Automatizar Misión|r cuando hables con el proveedor de la misión."
+	L.Tutorial2 = "¿Y si quieres que Blitz entregue todas las misiones completadas para ti, no sólo las diarias? ¿O para seleccionar automáticamente la recompensa más valiosa?|n|nEstas y muchas otras opciones están disponibles en el |cffffd200Menú del Juego|r en |cffffd200Opciones de Interfaz|r."
 
-    L.Accept = "Aceptar Todas las Misiones"
-    L.AcceptTip = "Si está habilitado, Blitz aceptará cualquier misión disponible."
-    L.Deliver = "Entregar Misiones Completadas"
-    L.DeliverTip = "Si está habilitado, Blitz entregará cualquier misión completada."
-    L.SelectReward = "Seleccionar Recompensa"
-    L.SelectRewardTip = "Si está habilitado, Blitz elegirá automáticamente la recompensa más valiosa al entregar misiones."
+	L.Accept = "Aceptar Todas las Misiones"
+	L.AcceptTip = "Si está habilitado, Blitz aceptará cualquier misión disponible."
+	L.Deliver = "Entregar Misiones Completadas"
+	L.DeliverTip = "Si está habilitado, Blitz entregará cualquier misión completada."
+	L.SelectReward = "Seleccionar Recompensa"
+	L.SelectRewardTip = "Si está habilitado, Blitz elegirá automáticamente la recompensa más valiosa al entregar misiones."
 
-    L.Manual = "Requiere Tecla"
-    L.ManualTip = "Si está habilitado, las misiones sólo se automatizarán si mantienes presionada la tecla de abajo."
-    L.AutomateKey = "Tecla de Automatización"
-    L.AutomateKeyTip = "Mantén presionado para permitir que las misiones se automaticen."
-    L.ManualKey = "Tecla Manual"
-    L.ManualKeyTip = "Mantén presionado para evitar que las misiones se automaticen."
+	L.Manual = "Requiere Tecla"
+	L.ManualTip = "Si está habilitado, las misiones sólo se automatizarán si mantienes presionada la tecla de abajo."
+	L.AutomateKey = "Tecla de Automatización"
+	L.AutomateKeyTip = "Mantén presionado para permitir que las misiones se automaticen."
+	L.ManualKey = "Tecla Manual"
+	L.ManualKeyTip = "Mantén presionado para evitar que las misiones se automaticen."
 
 -- German --
 elseif Language == 'deDE' then
-    L.GeneralDescription = "Standardmäßig automatisiert Blitz nur tägliche und wiederholbare Quests deiner Wahl. Diese Optionen ermöglichen es dir, zu ändern, wann und welche Quests automatisiert werden."
-    L.PatronsDescription = "Blitz wird kostenlos verteilt und durch Spenden unterstützt. Ein riesiges Dankeschön an alle Unterstützer auf Patreon und Paypal, die die Entwicklung am Leben erhalten. Du kannst auch ein Patron werden unter |cFFF96854patreon.com/jaliborc|r."
+	L.GeneralDescription = "Standardmäßig automatisiert Blitz nur tägliche und wiederholbare Quests deiner Wahl. Diese Optionen ermöglichen es dir, zu ändern, wann und welche Quests automatisiert werden."
+	L.PatronsDescription = "Blitz wird kostenlos verteilt und durch Spenden unterstützt. Ein riesiges Dankeschön an alle Unterstützer auf Patreon und Paypal, die die Entwicklung am Leben erhalten. Du kannst auch ein Patron werden unter |cFFF96854patreon.com/jaliborc|r."
 
-    L.Welcome = "Willkommen bei Blitz!"
-    L.Tutorial1 = "Du benutzt jetzt |cffffd200Blitz|r von |cffffd200Jaliborc|r, ein Addon, das automatisch Quests für dich annimmt und abgibt.|n|nStandardmäßig automatisiert |cffffd200Blitz|r nur tägliche, wöchentliche und wiederholbare Quests deiner Wahl. Du kannst sie auswählen, indem du auf die |cffffd200Quest automatisieren|r Schaltfläche klickst, wenn du mit dem Questgeber sprichst."
-    L.Tutorial2 = "Was ist, wenn du möchtest, dass Blitz alle abgeschlossenen Quests für dich abgibt, nicht nur die täglichen? Oder automatisch die wertvollste Belohnung auswählt?|n|nDiese und viele andere Optionen findest du im |cffffd200Spielmenü|r unter den |cffffd200Interface-Optionen|r."
+	L.Welcome = "Willkommen bei Blitz!"
+	L.Tutorial1 = "Du benutzt jetzt |cffffd200Blitz|r von |cffffd200Jaliborc|r, ein Addon, das automatisch Quests für dich annimmt und abgibt.|n|nStandardmäßig automatisiert |cffffd200Blitz|r nur tägliche, wöchentliche und wiederholbare Quests deiner Wahl. Du kannst sie auswählen, indem du auf die |cffffd200Quest automatisieren|r Schaltfläche klickst, wenn du mit dem Questgeber sprichst."
+	L.Tutorial2 = "Was ist, wenn du möchtest, dass Blitz alle abgeschlossenen Quests für dich abgibt, nicht nur die täglichen? Oder automatisch die wertvollste Belohnung auswählt?|n|nDiese und viele andere Optionen findest du im |cffffd200Spielmenü|r unter den |cffffd200Interface-Optionen|r."
 
-    L.Accept = "Alle Quests annehmen"
-    L.AcceptTip = "Wenn aktiviert, wird Blitz alle verfügbaren täglichen oder wiederholbaren Quests annehmen."
-    L.Deliver = "Abgeschlossene Quests abgeben"
-    L.DeliverTip = "Wenn aktiviert, wird Blitz alle abgeschlossenen täglichen oder wiederholbaren Quests abgeben."
-    L.SelectReward = "Belohnung auswählen"
-    L.SelectRewardTip = "Wenn aktiviert, wird Blitz automatisch die wertvollste Belohnung auswählen, wenn Quests abgegeben werden."
+	L.Accept = "Alle Quests annehmen"
+	L.AcceptTip = "Wenn aktiviert, wird Blitz alle verfügbaren täglichen oder wiederholbaren Quests annehmen."
+	L.Deliver = "Abgeschlossene Quests abgeben"
+	L.DeliverTip = "Wenn aktiviert, wird Blitz alle abgeschlossenen täglichen oder wiederholbaren Quests abgeben."
+	L.SelectReward = "Belohnung auswählen"
+	L.SelectRewardTip = "Wenn aktiviert, wird Blitz automatisch die wertvollste Belohnung auswählen, wenn Quests abgegeben werden."
 
-    L.Manual = "Taste erforderlich"
-    L.ManualTip = "Wenn aktiviert, werden Quests nur automatisiert, wenn du die untenstehende Taste gedrückt hältst."
-    L.AutomateKey = "Automatisierungstaste"
-    L.AutomateKeyTip = "Halten, um die Automatisierung von Quests zu ermöglichen."
-    L.ManualKey = "Manuelle Taste"
-    L.ManualKeyTip = "Halten, um die Automatisierung von Quests zu verhindern."
+	L.Manual = "Taste erforderlich"
+	L.ManualTip = "Wenn aktiviert, werden Quests nur automatisiert, wenn du die untenstehende Taste gedrückt hältst."
+	L.AutomateKey = "Automatisierungstaste"
+	L.AutomateKeyTip = "Halten, um die Automatisierung von Quests zu ermöglichen."
+	L.ManualKey = "Manuelle Taste"
+	L.ManualKeyTip = "Halten, um die Automatisierung von Quests zu verhindern."
 
 -- Italian --
 elseif Language == 'itIT' then
-    L.GeneralDescription = "Di default, Blitz automatizza solo missioni quotidiane e ripetibili a tua scelta. Queste opzioni ti permettono di cambiare quando e quali missioni vengono automatizzate."
-    L.PatronsDescription = "Blitz è distribuito gratuitamente e supportato attraverso donazioni. Un enorme ringraziamento a tutti i sostenitori su Patreon e Paypal che mantengono vivo lo sviluppo. Anche tu puoi diventare un patrono su |cFFF96854patreon.com/jaliborc|r."
+	L.GeneralDescription = "Di default, Blitz automatizza solo missioni quotidiane e ripetibili a tua scelta. Queste opzioni ti permettono di cambiare quando e quali missioni vengono automatizzate."
+	L.PatronsDescription = "Blitz è distribuito gratuitamente e supportato attraverso donazioni. Un enorme ringraziamento a tutti i sostenitori su Patreon e Paypal che mantengono vivo lo sviluppo. Anche tu puoi diventare un patrono su |cFFF96854patreon.com/jaliborc|r."
 
-    L.Welcome = "Benvenuto in Blitz!"
-    L.Tutorial1 = "Ora stai usando |cffffd200Blitz|r, di |cffffd200Jaliborc|r, un addon che accetta e consegna automaticamente missioni per te.|n|nDi default, |cffffd200Blitz|r automatizza solo missioni quotidiane, settimanali e ripetibili a tua scelta. Puoi selezionarle cliccando sul pulsante |cffffd200Automatizza Missione|r quando parli con il donatore della missione."
-    L.Tutorial2 = "E se vuoi che Blitz consegni tutte le missioni completate per te, non solo quelle quotidiane? O per selezionare automaticamente la ricompensa più preziosa?|n|nQueste e molte altre opzioni sono disponibili nel |cffffd200Menu di Gioco|r nelle |cffffd200Opzioni Interfaccia|r."
+	L.Welcome = "Benvenuto in Blitz!"
+	L.Tutorial1 = "Ora stai usando |cffffd200Blitz|r, di |cffffd200Jaliborc|r, un addon che accetta e consegna automaticamente missioni per te.|n|nDi default, |cffffd200Blitz|r automatizza solo missioni quotidiane, settimanali e ripetibili a tua scelta. Puoi selezionarle cliccando sul pulsante |cffffd200Automatizza Missione|r quando parli con il donatore della missione."
+	L.Tutorial2 = "E se vuoi che Blitz consegni tutte le missioni completate per te, non solo quelle quotidiane? O per selezionare automaticamente la ricompensa più preziosa?|n|nQueste e molte altre opzioni sono disponibili nel |cffffd200Menu di Gioco|r nelle |cffffd200Opzioni Interfaccia|r."
 
-    L.Accept = "Accetta Tutte le Missioni"
-    L.AcceptTip = "Se abilitato, Blitz accetterà qualsiasi missione quotidiana o ripetibile disponibile."
-    L.Deliver = "Consegna Missioni Completate"
-    L.DeliverTip = "Se abilitato, Blitz consegnerà qualsiasi missione quotidiana o ripetibile completata."
-    L.SelectReward = "Seleziona Ricompensa"
-    L.SelectRewardTip = "Se abilitato, Blitz sceglierà automaticamente la ricompensa più preziosa quando consegni missioni."
+	L.Accept = "Accetta Tutte le Missioni"
+	L.AcceptTip = "Se abilitato, Blitz accetterà qualsiasi missione quotidiana o ripetibile disponibile."
+	L.Deliver = "Consegna Missioni Completate"
+	L.DeliverTip = "Se abilitato, Blitz consegnerà qualsiasi missione quotidiana o ripetibile completata."
+	L.SelectReward = "Seleziona Ricompensa"
+	L.SelectRewardTip = "Se abilitato, Blitz sceglierà automaticamente la ricompensa più preziosa quando consegni missioni."
 
-    L.Manual = "Richiedi Tasto"
-    L.ManualTip = "Se abilitato, le missioni saranno automatizzate solo se tieni premuto il tasto sottostante."
-    L.AutomateKey = "Tasto Automazione"
-    L.AutomateKeyTip = "Tieni premuto per permettere l'automazione delle missioni."
-    L.ManualKey = "Tasto Manuale"
-    L.ManualKeyTip = "Tieni premuto per prevenire l'automazione delle missioni."
+	L.Manual = "Richiedi Tasto"
+	L.ManualTip = "Se abilitato, le missioni saranno automatizzate solo se tieni premuto il tasto sottostante."
+	L.AutomateKey = "Tasto Automazione"
+	L.AutomateKeyTip = "Tieni premuto per permettere l'automazione delle missioni."
+	L.ManualKey = "Tasto Manuale"
+	L.ManualKeyTip = "Tieni premuto per prevenire l'automazione delle missioni."
 
 -- French --
 elseif Language =='frFR' then
@@ -118,72 +118,72 @@ elseif Language =='frFR' then
 
 -- Traditional Chinese --
 elseif Language == 'zhTW' then
-    L.GeneralDescription = "Blitz預設僅接受每日或重複任務，此選項可以調整設定。"
-    L.PatronsDescription = "Blitz是免費發佈的，並通過捐款獲得支持。在Patreon和Paypal上的所有支持者都非常感謝，他們讓這個項目能夠持續發展。您也可以在%s成為其中一員。"
+	L.GeneralDescription = "Blitz預設僅接受每日或重複任務，此選項可以調整設定。"
+	L.PatronsDescription = "Blitz是免費發佈的，並通過捐款獲得支持。在Patreon和Paypal上的所有支持者都非常感謝，他們讓這個項目能夠持續發展。您也可以在%s成為其中一員。"
 
-    L.Welcome = "歡迎使用Blitz!"
-    L.Tutorial1 = "您正在使用由 |cffffd200Jaliborc|r 創作的 |cffffd200Blitz|r 插件|n|n 在預設情況下 |cffffd200Blitz|r 僅自動接受每日任務、每週任務或重複任務，您可在任務給予者畫面點擊 |cffffd200自動任務|r 按鈕來開啟功能。"
-    L.Tutorial2 = "如果您希望Blitz為您交付所有已完成的任務，而不僅僅是每日任務？或者自動選擇最有價值的獎勵？|n|n這些以及其他許多選項都可以在 |cffffd200遊戲菜單|r 的 |cffffd200界面選項|r 中找到。"
+	L.Welcome = "歡迎使用Blitz!"
+	L.Tutorial1 = "您正在使用由 |cffffd200Jaliborc|r 創作的 |cffffd200Blitz|r 插件|n|n 在預設情況下 |cffffd200Blitz|r 僅自動接受每日任務、每週任務或重複任務，您可在任務給予者畫面點擊 |cffffd200自動任務|r 按鈕來開啟功能。"
+	L.Tutorial2 = "如果您希望Blitz為您交付所有已完成的任務，而不僅僅是每日任務？或者自動選擇最有價值的獎勵？|n|n這些以及其他許多選項都可以在 |cffffd200遊戲菜單|r 的 |cffffd200界面選項|r 中找到。"
 
-    L.Accept = "接受所有任務"
-    L.AcceptTip = "如果啟用，Blitz將接受任何可用的每日或重複任務。"
-    L.Deliver = "繳交已完成的任務"
-    L.DeliverTip = "如果啟用，Blitz將交付任何已完成的每日或重複任務。"
-    L.SelectReward = "選擇獎勵"
-    L.SelectRewardTip = "如果啟用，Blitz將自動選擇交付任務時最有價值的獎勵。"
+	L.Accept = "接受所有任務"
+	L.AcceptTip = "如果啟用，Blitz將接受任何可用的每日或重複任務。"
+	L.Deliver = "繳交已完成的任務"
+	L.DeliverTip = "如果啟用，Blitz將交付任何已完成的每日或重複任務。"
+	L.SelectReward = "選擇獎勵"
+	L.SelectRewardTip = "如果啟用，Blitz將自動選擇交付任務時最有價值的獎勵。"
 
-    L.Manual = "需要手動鍵"
-    L.ManualTip = "如果啟用，只有在您按住下面的鍵時，任務才會被自動化。"
-    L.AutomateKey = "自動鍵"
-    L.AutomateKeyTip = "按住以允許任務被自動化。"
-    L.ManualKey = "手動鍵"
-    L.ManualKeyTip = "按住以防止任務被自動化。"
+	L.Manual = "需要手動鍵"
+	L.ManualTip = "如果啟用，只有在您按住下面的鍵時，任務才會被自動化。"
+	L.AutomateKey = "自動鍵"
+	L.AutomateKeyTip = "按住以允許任務被自動化。"
+	L.ManualKey = "手動鍵"
+	L.ManualKeyTip = "按住以防止任務被自動化。"
 
 -- Simplified Chinese --
 elseif Language == 'zhCN' then
-    L.GeneralDescription = "Blitz预设仅接受每日或重复任务，此选项可以调整设定。"
-    L.PatronsDescription = "Blitz是免费发布的，并通过捐款获得支持。在Patreon和Paypal上的所有支持者都非常感谢，他们让这个项目能够持续发展。您也可以在%s成为其中一员。"
+	L.GeneralDescription = "Blitz预设仅接受每日或重复任务，此选项可以调整设定。"
+	L.PatronsDescription = "Blitz是免费发布的，并通过捐款获得支持。在Patreon和Paypal上的所有支持者都非常感谢，他们让这个项目能够持续发展。您也可以在%s成为其中一员。"
 
-    L.Welcome = "欢迎使用Blitz!"
-    L.Tutorial1 = "您正在使用由 |cffffd200Jaliborc|r 创作的 |cffffd200Blitz|r 插件|n|n 在预设情况下 |cffffd200Blitz|r 仅自动接受日常任务、周常任务或重复任务，您可在任务给予者画面点击 |cffffd200自动任务|r 按钮来开启功能。"
-    L.Tutorial2 = "如果您希望Blitz为您交付所有已完成的任务，而不仅仅是日常任务？或者自动选择最有价值的奖励？|n|n这些以及其他许多选项都可以在 |cffffd200游戏菜单|r 的 |cffffd200界面选项|r 中找到。"
+	L.Welcome = "欢迎使用Blitz!"
+	L.Tutorial1 = "您正在使用由 |cffffd200Jaliborc|r 创作的 |cffffd200Blitz|r 插件|n|n 在预设情况下 |cffffd200Blitz|r 仅自动接受日常任务、周常任务或重复任务，您可在任务给予者画面点击 |cffffd200自动任务|r 按钮来开启功能。"
+	L.Tutorial2 = "如果您希望Blitz为您交付所有已完成的任务，而不仅仅是日常任务？或者自动选择最有价值的奖励？|n|n这些以及其他许多选项都可以在 |cffffd200游戏菜单|r 的 |cffffd200界面选项|r 中找到。"
 
-    L.Accept = "接受所有任务"
-    L.AcceptTip = "如果启用，Blitz将接受任何可用的日常或重复任务。"
-    L.Deliver = "缴交已完成的任务"
-    L.DeliverTip = "如果启用，Blitz将交付任何已完成的日常或重复任务。"
-    L.SelectReward = "选择奖励"
-    L.SelectRewardTip = "如果启用，Blitz将自动选择交付任务时最有价值的奖励。"
+	L.Accept = "接受所有任务"
+	L.AcceptTip = "如果启用，Blitz将接受任何可用的日常或重复任务。"
+	L.Deliver = "缴交已完成的任务"
+	L.DeliverTip = "如果启用，Blitz将交付任何已完成的日常或重复任务。"
+	L.SelectReward = "选择奖励"
+	L.SelectRewardTip = "如果启用，Blitz将自动选择交付任务时最有价值的奖励。"
 
-    L.Manual = "需要手动键"
-    L.ManualTip = "如果启用，只有在您按住下面的键时，任务才会被自动化。"
-    L.AutomateKey = "自动键"
-    L.AutomateKeyTip = "按住以允许任务被自动化。"
-    L.ManualKey = "手动键"
-    L.ManualKeyTip = "按住以防止任务被自动化。"
+	L.Manual = "需要手动键"
+	L.ManualTip = "如果启用，只有在您按住下面的键时，任务才会被自动化。"
+	L.AutomateKey = "自动键"
+	L.AutomateKeyTip = "按住以允许任务被自动化。"
+	L.ManualKey = "手动键"
+	L.ManualKeyTip = "按住以防止任务被自动化。"
 
 -- Korean
 elseif Language == 'koKR' then
-    L.GeneralDescription = "기본적으로 Blitz는 당신이 선택한 일일 및 반복 퀘스트만 자동화합니다. 이 옵션을 사용하면 언제, 어떤 퀘스트를 자동화할지 변경할 수 있습니다."
-    L.PatronsDescription = "Blitz는 무료로 배포되며 기부를 통해 지원됩니다. Patreon과 Paypal에서 지원해 주신 모든 분께 깊은 감사를 드립니다. %s에서 후원자가 될 수도 있습니다."
+	L.GeneralDescription = "기본적으로 Blitz는 당신이 선택한 일일 및 반복 퀘스트만 자동화합니다. 이 옵션을 사용하면 언제, 어떤 퀘스트를 자동화할지 변경할 수 있습니다."
+	L.PatronsDescription = "Blitz는 무료로 배포되며 기부를 통해 지원됩니다. Patreon과 Paypal에서 지원해 주신 모든 분께 깊은 감사를 드립니다. %s에서 후원자가 될 수도 있습니다."
 
-    L.Welcome = "Blitz에 오신 것을 환영합니다!"
-    L.Tutorial1 = "당신은 지금 |cffffd200Jaliborc|r의 |cffffd200Blitz|r 애드온을 사용하고 있습니다.|n|n기본적으로 |cffffd200Blitz|r는 당신이 선택한 일일, 주간, 반복 퀘스트만 자동화합니다. 퀘스트 제공자와 대화할 때 |cffffd200퀘스트 자동화|r 버튼을 클릭하여 선택할 수 있습니다."
-    L.Tutorial2 = "Blitz가 일일 퀘스트 외에도 모든 완료된 퀘스트를 자동으로 제출하길 원하시나요? 또는 자동으로 가장 가치 있는 보상을 선택하게 하고 싶으신가요?|n|n이러한 옵션과 다른 많은 옵션은 |cffffd200게임 메뉴|r의 |cffffd200인터페이스 옵션|r에서 사용할 수 있습니다."
+	L.Welcome = "Blitz에 오신 것을 환영합니다!"
+	L.Tutorial1 = "당신은 지금 |cffffd200Jaliborc|r의 |cffffd200Blitz|r 애드온을 사용하고 있습니다.|n|n기본적으로 |cffffd200Blitz|r는 당신이 선택한 일일, 주간, 반복 퀘스트만 자동화합니다. 퀘스트 제공자와 대화할 때 |cffffd200퀘스트 자동화|r 버튼을 클릭하여 선택할 수 있습니다."
+	L.Tutorial2 = "Blitz가 일일 퀘스트 외에도 모든 완료된 퀘스트를 자동으로 제출하길 원하시나요? 또는 자동으로 가장 가치 있는 보상을 선택하게 하고 싶으신가요?|n|n이러한 옵션과 다른 많은 옵션은 |cffffd200게임 메뉴|r의 |cffffd200인터페이스 옵션|r에서 사용할 수 있습니다."
 
-    L.Accept = "모든 퀘스트 수락"
-    L.AcceptTip = "활성화하면, Blitz는 모든 가능한 일일이나 반복 퀘스트를 수락합니다."
-    L.Deliver = "완료된 퀘스트 제출"
-    L.DeliverTip = "활성화하면, Blitz는 모든 완료된 일일이나 반복 퀘스트를 제출합니다."
-    L.SelectReward = "보상 선택"
-    L.SelectRewardTip = "활성화하면, 퀘스트를 제출할 때 Blitz는 자동으로 가장 가치 있는 보상을 선택합니다."
+	L.Accept = "모든 퀘스트 수락"
+	L.AcceptTip = "활성화하면, Blitz는 모든 가능한 일일이나 반복 퀘스트를 수락합니다."
+	L.Deliver = "완료된 퀘스트 제출"
+	L.DeliverTip = "활성화하면, Blitz는 모든 완료된 일일이나 반복 퀘스트를 제출합니다."
+	L.SelectReward = "보상 선택"
+	L.SelectRewardTip = "활성화하면, 퀘스트를 제출할 때 Blitz는 자동으로 가장 가치 있는 보상을 선택합니다."
 
-    L.Manual = "키 필요"
-    L.ManualTip = "활성화하면, 아래의 키를 누르고 있을 때만 퀘스트가 자동화됩니다."
-    L.AutomateKey = "자동화 키"
-    L.AutomateKeyTip = "퀘스트를 자동화하도록 허용하기 위해 누르고 있습니다."
-    L.ManualKey = "수동 키"
-    L.ManualKeyTip = "퀘스트 자동화를 방지하기 위해 누르고 있습니다."
+	L.Manual = "키 필요"
+	L.ManualTip = "활성화하면, 아래의 키를 누르고 있을 때만 퀘스트가 자동화됩니다."
+	L.AutomateKey = "자동화 키"
+	L.AutomateKeyTip = "퀘스트를 자동화하도록 허용하기 위해 누르고 있습니다."
+	L.ManualKey = "수동 키"
+	L.ManualKeyTip = "퀘스트 자동화를 방지하기 위해 누르고 있습니다."
 	
 -- Russian --
 elseif Language =='ruRU' then
@@ -211,7 +211,7 @@ elseif Language =='ruRU' then
 -- English --
 else
 	L.GeneralDescription = 'By default, Blitz only automates daily and repeatable quests of your choice. These options allow you to change when and which quests it automates.'
-    L.PatronsDescription = 'Blitz is distributed for free and supported trough donations. A massive thank you to all the supporters on Patreon and Paypal who keep development alive. You can become a patron too at |cFFF96854patreon.com/jaliborc|r.'
+	L.PatronsDescription = 'Blitz is distributed for free and supported trough donations. A massive thank you to all the supporters on Patreon and Paypal who keep development alive. You can become a patron too at |cFFF96854patreon.com/jaliborc|r.'
 
 	L.Welcome = 'Welcome to Blitz!'
 	L.Tutorial1 = 'You are now using |cffffd200Blitz|r, by |cffffd200Jaliborc|r, an addon which automatically accepts and delivers quests for you.|n|nBy default, |cffffd200Blitz|r only automates daily, weekly and repeatable quests of your choice. You can select them by clicking on the |cffffd200Automate Quest|r button when talking to the quest giver.'
@@ -223,8 +223,8 @@ else
 	L.DeliverTip = 'If enabled, Blitz will deliver any completed quest.'
 	L.SelectReward = 'Select Reward'
 	L.SelectRewardTip = 'If enabled, Blitz will automatically choose the most valuable reward when delivering quests.'
-    L.Warband = 'Automate Warband-Completed'
-    L.WarbandTip = 'If enabled, Blitz will automate quests that your other characters have completed.'
+	L.Warband = 'Automate Warband-Completed'
+	L.WarbandTip = 'If enabled, Blitz will automate quests that your other characters have completed.'
 
 	L.Manual = 'Require Key'
 	L.ManualTip = 'If enabled, quests will only be automated if you hold the key below.'

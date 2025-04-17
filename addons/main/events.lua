@@ -12,11 +12,11 @@ local BIG = 2^10000
 --[[ Startup ]]--
 
 function Events:OnLoad()
-  self:RegisterEvent('GOSSIP_SHOW')
-  self:RegisterEvent('QUEST_GREETING')
-  self:RegisterEvent('QUEST_DETAIL')
-  self:RegisterEvent('QUEST_PROGRESS')
-  self:RegisterEvent('QUEST_COMPLETE')
+	self:RegisterEvent('GOSSIP_SHOW')
+	self:RegisterEvent('QUEST_GREETING')
+	self:RegisterEvent('QUEST_DETAIL')
+	self:RegisterEvent('QUEST_PROGRESS')
+	self:RegisterEvent('QUEST_COMPLETE')
 end
 
 
@@ -95,7 +95,6 @@ end
 
 
 --[[ API ]]--
-
 
 function Events:NumSkips(id)
 	local status = Addon:IsAutomated(id)
