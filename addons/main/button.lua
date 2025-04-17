@@ -47,7 +47,7 @@ end
 
 function Button:UpdateButton(active)
 	local id = GetQuestID()
-	local repeatable = C_QuestLog.IsRepeatableQuest and C_QuestLog.IsRepeatableQuest(id)
+	local repeatable = (C_QuestLog.IsRepeatableQuest or nop)(id)
 						or active and not C_QuestLog.IsOnQuest(id)
 
 	if self:IsPeriodic() or repeatable then
@@ -96,5 +96,5 @@ function Button:SaveQuest()
 end
 
 function Button:IsPeriodic()
-	return (QuestIsDaily and QuestIsDaily()) or (QuestIsWeekly and QuestIsWeekly())
+	return (QuestIsDaily or nop)() or (QuestIsWeekly or nop)()
 end

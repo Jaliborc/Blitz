@@ -11,9 +11,9 @@ if Language == 'ptBR' then
     L.Tutorial2 = "E se você quiser que o Blitz entregue todas as missões concluídas para você, não apenas as diárias? Ou para selecionar automaticamente a recompensa mais valiosa?|n|nEssas e muitas outras opções estão disponíveis no |cffffd200Menu do Jogo|r em |cffffd200Opções de Interface|r."
 
     L.Accept = "Aceitar Todas as Missões"
-    L.AcceptTip = "Se ativado, o Blitz aceitará qualquer missão diária ou repetível disponível."
+    L.AcceptTip = "Se ativado, o Blitz aceitará qualquer missão disponível."
     L.Deliver = "Entregar Missões Concluídas"
-    L.DeliverTip = "Se ativado, o Blitz entregará qualquer missão diária ou repetível concluída."
+    L.DeliverTip = "Se ativado, o Blitz entregará qualquer missão concluída."
     L.SelectReward = "Selecionar Recompensa"
     L.SelectRewardTip = "Se ativado, o Blitz escolherá automaticamente a recompensa mais valiosa ao entregar missões."
 
@@ -34,9 +34,9 @@ elseif Language == 'esES' or Language == 'esMX' then
     L.Tutorial2 = "¿Y si quieres que Blitz entregue todas las misiones completadas para ti, no sólo las diarias? ¿O para seleccionar automáticamente la recompensa más valiosa?|n|nEstas y muchas otras opciones están disponibles en el |cffffd200Menú del Juego|r en |cffffd200Opciones de Interfaz|r."
 
     L.Accept = "Aceptar Todas las Misiones"
-    L.AcceptTip = "Si está habilitado, Blitz aceptará cualquier misión diaria o repetible disponible."
+    L.AcceptTip = "Si está habilitado, Blitz aceptará cualquier misión disponible."
     L.Deliver = "Entregar Misiones Completadas"
-    L.DeliverTip = "Si está habilitado, Blitz entregará cualquier misión diaria o repetible completada."
+    L.DeliverTip = "Si está habilitado, Blitz entregará cualquier misión completada."
     L.SelectReward = "Seleccionar Recompensa"
     L.SelectRewardTip = "Si está habilitado, Blitz elegirá automáticamente la recompensa más valiosa al entregar misiones."
 
@@ -218,9 +218,9 @@ else
 	L.Tutorial2 = 'What if you want Blitz to deliver all completed quests for you, not only the daily ones? Or to automatically select the most valuable reward?|n|nThese and many other options are available at the |cffffd200Game Menu|r at the |cffffd200Interface Options|r.'
 
 	L.Accept = 'Accept All Quests'
-	L.AcceptTip = 'If enabled, Blitz will accept any available daily or repeatable quest.'
+	L.AcceptTip = 'If enabled, Blitz will accept any available quest.'
 	L.Deliver = 'Deliver Completed Quests'
-	L.DeliverTip = 'If enabled, Blitz will deliver any daily or repeatable completed quest.'
+	L.DeliverTip = 'If enabled, Blitz will deliver any completed quest.'
 	L.SelectReward = 'Select Reward'
 	L.SelectRewardTip = 'If enabled, Blitz will automatically choose the most valuable reward when delivering quests.'
 
