@@ -32,6 +32,8 @@ function Options:OnMain()
 		reward.left = reward.left + 20
 		reward:SetSmall(true)
 	end
+	
+	self:AddInput('Check', 'warband', 'Warband')
 
 	self:AddInput('Check', 'manual', 'Manual')
 	self:AddInput('DropChoice', 'key', Blitz.sets.manual and 'AutomateKey' or 'ManualKey'):AddChoices {

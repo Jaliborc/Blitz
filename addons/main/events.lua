@@ -53,13 +53,17 @@ end
 --[[ Quest ]]--
 
 function Events:QUEST_DETAIL()
-	if Addon:IsKeyDown() and (Addon.sets.accept or Addon:IsEnabled(GetQuestID())) then
+	local id = GetQuestID()
+	local wbc = self:CheckWarbandComplete(id)
+	if Addon:IsKeyDown() and (wbc or Addon.sets.accept or Addon:IsEnabled(id)) then
 		AcceptQuest()
 	end
 end
 
 function Events:QUEST_PROGRESS()
-	if Addon:IsKeyDown() and self:NumSkips(GetQuestID()) then
+	local id = GetQuestID()
+	local wbc = self:CheckWarbandComplete(id) and IsQuestCompletable()
+	if Addon:IsKeyDown() and (self:NumSkips(id) or wbc) then
 		CompleteQuest()
 	end
 end
@@ -70,8 +74,8 @@ function Events:QUEST_COMPLETE()
 		local data = Addon:IsEnabled(id)
 		local item = self:GetReward(data)
 		local skips = self:NumSkips(id)
-
-		if skips then
+		local wbc = self:CheckWarbandComplete(id) and IsQuestCompletable()
+		if skips or wbc then
 			if GetNumQuestChoices() == 0 or item > 0 then
 				GetQuestReward(item)
 
@@ -95,8 +99,13 @@ end
 
 --[[ API ]]--
 
+function Events:CheckWarbandComplete(id)
+	local warbandComplete = C_QuestLog.IsQuestFlaggedCompletedOnAccount(id)
+	return warbandComplete and Addon.sets.warband
+end
+
 function Events:NumSkips(id)
-  local data = Addon:IsEnabled(id)
+	local data = Addon:IsEnabled(id)
 	if type(data) ~= 'string' then
 		if id and C_QuestLog.IsOnQuest(id) then
 			return (data or Addon.sets.deliver) and S.IsComplete(id) and 0
