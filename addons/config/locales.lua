@@ -223,6 +223,8 @@ else
 	L.DeliverTip = 'If enabled, Blitz will deliver any daily or repeatable completed quest.'
 	L.SelectReward = 'Select Reward'
 	L.SelectRewardTip = 'If enabled, Blitz will automatically choose the most valuable reward when delivering quests.'
+    L.Warband = 'Automate If Warband-Complete'
+    L.WarbandTip = 'If enabled, Blitz will automate quests that your other characters have completed.'
 
 	L.Manual = 'Require Key'
 	L.ManualTip = 'If enabled, quests will only be automated if you hold the key below.'
