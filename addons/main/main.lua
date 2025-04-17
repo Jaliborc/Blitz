@@ -25,6 +25,10 @@ end
 
 --[[ Basics ]]--
 
+function Blitz:IsAutomated(id)
+	return self:IsEnabled(id) or Addon.sets.warband and C.QuestLog.IsQuestFlaggedCompletedOnAccount(id)
+end
+
 function Blitz:IsEnabled(id)
 	return id and self.sets.quests[id]
 end

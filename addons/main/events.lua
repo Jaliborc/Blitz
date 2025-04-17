@@ -5,7 +5,8 @@ All Rights Reserved
 
 local ADDON, Addon = ...
 local Events = Addon:NewModule('Events')
-local S, BIG = Addon.Server, 2^10000
+local C = LibStub('C_Everywhere')
+local BIG = 2^10000
 
 
 --[[ Startup ]]--
@@ -22,8 +23,8 @@ end
 --[[ Gossip ]]--
 
 function Events:GOSSIP_SHOW()
-	if Addon:IsKeyDown() and not self:BestSkip(S.NumActive, S.GetActive, S.SelectActive) then
-		self:BestSkip(S.NumAvailable, S.GetAvailable, S.SelectAvailable)
+	if Addon:IsKeyDown() and not self:BestSkip(C.GossipInfo.GetNumActiveQuests, Addon.Server.GetActive, C.GossipInfo.SelectActiveQuest) then
+		self:BestSkip(C.GossipInfo.GetNumAvailableQuests, Addon.Server.GetAvailable, C.GossipInfo.SelectAvailableQuest)
 	end
 end
 
@@ -53,17 +54,13 @@ end
 --[[ Quest ]]--
 
 function Events:QUEST_DETAIL()
-	local id = GetQuestID()
-	local wbc = self:CheckWarbandComplete(id)
-	if Addon:IsKeyDown() and (wbc or Addon.sets.accept or Addon:IsEnabled(id)) then
+	if Addon:IsKeyDown() and (Addon.sets.accept or Addon:IsAutomated(GetQuestID())) then
 		AcceptQuest()
 	end
 end
 
 function Events:QUEST_PROGRESS()
-	local id = GetQuestID()
-	local wbc = self:CheckWarbandComplete(id) and IsQuestCompletable()
-	if Addon:IsKeyDown() and (self:NumSkips(id) or wbc) then
+	if Addon:IsKeyDown() and self:NumSkips(GetQuestID()) then
 		CompleteQuest()
 	end
 end
@@ -74,13 +71,13 @@ function Events:QUEST_COMPLETE()
 		local data = Addon:IsEnabled(id)
 		local item = self:GetReward(data)
 		local skips = self:NumSkips(id)
-		local wbc = self:CheckWarbandComplete(id) and IsQuestCompletable()
-		if skips or wbc then
+
+		if skips then
 			if GetNumQuestChoices() == 0 or item > 0 then
 				GetQuestReward(item)
 
 				if skips > 1 and Addon:LoadModule('Progress') then
-					Blitz.Progress:ShowQuest(id, data, skips)
+					Addon.Progress:ShowQuest(id, data, skips)
 				end
 			elseif data then
 				QuestChooseRewardError()
@@ -99,21 +96,17 @@ end
 
 --[[ API ]]--
 
-function Events:CheckWarbandComplete(id)
-	local warbandComplete = C_QuestLog.IsQuestFlaggedCompletedOnAccount(id)
-	return warbandComplete and Addon.sets.warband
-end
 
 function Events:NumSkips(id)
-	local data = Addon:IsEnabled(id)
-	if type(data) ~= 'string' then
-		if id and C_QuestLog.IsOnQuest(id) then
-			return (data or Addon.sets.deliver) and S.IsComplete(id) and 0
+	local status = Addon:IsAutomated(id)
+	if type(status) ~= 'string' then
+		if id and C.QuestLog.IsOnQuest(id) then
+			return (status or Addon.sets.deliver) and C.QuestLog.IsComplete(id) and 0
 		end
 
-		return data and 0
+		return status and 0
 	else
-		return self:NumStacks(data)
+		return self:NumStacks(status)
 	end
 end
 
@@ -139,7 +132,7 @@ function Events:GetReward(data)
 	if not item and Addon.sets.reward then
 		local best = 0
 		for i = 1, GetNumQuestChoices() do
-			local id = S.GetItem('choice', i)
+			local id = Addon.Server.GetItem('choice', i)
 			if id then
 				local value = select(11, GetItemInfo(id))
 				if value > best then
