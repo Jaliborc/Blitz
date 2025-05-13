@@ -1,3 +1,6 @@
+### 11.1.3
+* TOC update.
+
 ### 11.1.2
 * Retail: Added option to skip quests already completed on other characters (based on pull request by Sethenot).
 * Updated options tooltips that incorrectly stated that only daily/repeatable quests would be automated.
