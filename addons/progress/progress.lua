@@ -3,6 +3,7 @@ Copyright 2009-2025 João Cardoso
 All Rights Reserved
 --]]
 
+local C = LibStub('C_Everywhere')
 local Progress = Blitz:NewModule('Progress')
 local Alerts = AlertFrame:AddSimpleAlertFrameSubSystem('AchievementAlertFrameTemplate', function(frame, ...)
 	Progress.Startup(frame)
@@ -77,9 +78,9 @@ function Progress:Display(id, items, numDelivers)
 	local item, amount = Progress:GetWorseItem(items)
 
 	SetPortraitTexture(self.Portrait, 'NPC')
-	self.Unlocked:SetText((C_QuestLog.GetTitleForQuestID or C_QuestLog.GetQuestInfo)(id))
-	self.Icon.Texture:SetTexture(GetItemIcon(item))
-	self.Icon.Count:SetText(format('%s/%s', GetItemCount(item) or '?', amount or '?'))
+	self.Unlocked:SetText(C.QuestLog.GetTitleForQuestID(id))
+	self.Icon.Texture:SetTexture(C.Item.GetItemIconByID(item))
+	self.Icon.Count:SetText(format('%s/%s', C.Item.GetItemCount(item) or '?', amount or '?'))
 	self.Arrow.Fill:SetTexCoord(0, progress, 0, 1)
 	self.Arrow.Fill:SetWidth(190 * progress)
 	self.Arrow.Spark:SetShown(progress < 0.92)
@@ -89,7 +90,7 @@ function Progress:GetProgress(id, numSteps)
 	self.Goals[id] = max(self.Goals[id] or numSteps, numSteps)
 	self.Timeouts[id] = GetTime() + self.Delay
 
-	C_Timer.After(self.Delay, function()
+	C.Timer.After(self.Delay, function()
 		if self.Timeouts[id] <= GetTime() then
 			self.Goals[id] = nil
 		end
@@ -103,7 +104,7 @@ function Progress:GetWorseItem(items)
 	local item, amount
 
 	for id, required in gmatch(items, '(%d+):(%d+)') do
-		local stacks = floor(GetItemCount(id) / tonumber(required))
+		local stacks = floor(C.Item.GetItemCount(id) / tonumber(required))
 		if stacks < leastStacks then
 			leastStacks = stacks
 			amount = required

@@ -112,7 +112,7 @@ end
 function Events:NumStacks(data)
 	local delivers = BIG
 	for item, required in gmatch(data, '(%d+):(%d+)') do
-		delivers = min(delivers, floor(GetItemCount(item) / tonumber(required)))
+		delivers = min(delivers, floor(C.Item.GetItemCount(item) / tonumber(required)))
 	end
 
 	local money = strmatch(data, ';(%d+)')
@@ -133,7 +133,7 @@ function Events:GetReward(data)
 		for i = 1, GetNumQuestChoices() do
 			local id = Addon.Server.GetItem('choice', i)
 			if id then
-				local value = select(11, GetItemInfo(id))
+				local value = select(11, C.Item.GetItemInfo(id))
 				if value > best then
 					best = value
 					item = i
