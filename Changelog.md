@@ -1,3 +1,6 @@
+### 11.1.5
+* Updated WildAddon-1.1 for higher event fidelity.
+
 ### 11.1.4
 * Added support for Mists of Pandaria servers.
 

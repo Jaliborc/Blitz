@@ -7,7 +7,7 @@ local Sushi = LibStub('Sushi-3.2')
 local Options = Blitz:NewModule('Options', Sushi.OptionsGroup('|TInterface/PVPFrame/Icons/prestige-icon-4-1:16:16:0:0|t Blitz'))
 local L = Blitz.Locals
 
-local PATRONS = {{title='Jenkins',people={'Gnare','Debora S Ogormanw','Johnny Rabbit','Shaun Potts'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Ptsdthegamer','Adam Mann','Bc Spear','Jury ','Swallow@area52','Peter Hollaubek','Michael Kinasz','Brian Joaquin','Lisa','M Prieto','Ronald Platz','Airdrigh','James G'}}} -- generated patron list
+local PATRONS = {{title='Jenkins',people={'Gnare','Debora S Ogormanw','Johnny Rabbit','Shaun Potts','Michel Heyn'}},{title='Ambassador',people={'Julia F','Lolari ','Rafael Lins','Ptsdthegamer','Swallow@area52','Adam Mann','Bc Spear','Jury ','Peter Hollaubek','Michael Kinasz','Brian Joaquin','Lisa','M Prieto','Ronald Platz','Airdrigh','Ole Jonny Søndenå'}}} -- generated patron list
 local PATREON_ICON = '  |TInterface/Addons/Blitz/art/patreon:12:12|t'
 local FOOTER = 'Copyright 2008-2025 João Cardoso'
 
