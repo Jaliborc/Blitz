@@ -1,3 +1,6 @@
+## 11.2
+* Retail: Updated for Ghosts of K'aresh.
+
 ### 11.1.5
 * Updated WildAddon-1.1 for higher event fidelity.
 
