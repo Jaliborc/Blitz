@@ -1,3 +1,7 @@
+## 11.2.1
+* All: Added keybinding for toggling quest automation.
+* Retail: Added support for Midnight open beta.
+
 ## 11.2
 * Retail: Updated for Ghosts of K'aresh.
 

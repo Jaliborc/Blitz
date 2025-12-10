@@ -99,7 +99,7 @@ end
 function Events:NumSkips(id)
 	local status = Addon:IsEnabled(id)
 	if type(status) ~= 'string' then
-		if id and C.QuestLog.IsOnQuest(id) then
+		if id and id > 0 and C.QuestLog.IsOnQuest(id) then
 			return (status or Addon.sets.deliver) and C.QuestLog.IsComplete(id) and 0
 		end
 

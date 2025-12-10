@@ -7,6 +7,6 @@
 ## OptionalDeps: Immersion
 ## SavedVariables: Blitz_Sets
 ## Interface: 120000, 110205, 50501, 40402, 30404, 20504, 11507
-## Version: 11.2
+## Version: 11.2.1
 
 addons\main\main.xml
