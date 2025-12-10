@@ -3,12 +3,19 @@
         local L = Blitz.Locals
         local id = GetQuestID()
         
-        if id and Blitz.Button:IsShown() then
+        if id > 0 then
             Blitz.Button:OnClick()
             Blitz.Button:SetChecked(not Blitz.Button:GetChecked())
-            Blitz:Print('SYSTEM', Blitz:IsEnabled(id) and L.AutomationOn or L.AutomationOff)
+
+            ChatFrame_DisplaySystemMessageInPrimary(Blitz:IsEnabled(id) and L.AutomationOn or L.AutomationOff)
+            PlaySound(SOUNDKIT.GS_TITLE_OPTION_OK)
         else
-            Blitz:Print('SYSTEM', L.NoQuest)
+            ChatFrame_DisplaySystemMessageInPrimary(L.NoQuest)
+            PlaySound(GetRandomArrayEntry({2317, 2951, 2607, 2459, 1906, 1614}))
+            
+            if not PlaySound(SOUNDKIT.UI_GARRISON_ARCHITECT_TABLE_BUILDING_PLACEMENT_ERROR) then
+                PlaySound(SOUNDKIT.IG_MAINMENU_CLOSE)
+            end
         end
 	</Binding>
 </Bindings>

@@ -91,4 +91,4 @@ else
 	L.ToggleAutomation = 'Toggle Automation'
 end
 
-BLITZ_TOGGLE = L.ToggleAutomation
+BINDING_NAME_BLITZ_TOGGLE = L.ToggleAutomation
