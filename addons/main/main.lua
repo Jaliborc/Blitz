@@ -25,12 +25,10 @@ end
 
 --[[ Basics ]]--
 
-function Blitz:IsAutomated(id)
-	return self:IsEnabled(id) or Addon.sets.warband and C.QuestLog.IsQuestFlaggedCompletedOnAccount(id)
-end
-
 function Blitz:IsEnabled(id)
-	return id and self.sets.quests[id]
+	if id and self.sets.quests[id] ~= false then
+		return self.sets.quests[id] or Addon.sets.warband and C.QuestLog.IsQuestFlaggedCompletedOnAccount(id)
+	end
 end
 
 function Blitz:IsKeyDown()
@@ -39,4 +37,23 @@ function Blitz:IsKeyDown()
 		return down
 	end
 	return not down
+end
+
+function Blitz:Print(text, channel)
+	local i = 1
+	local frame = _G['ChatFrame' .. i]
+ 	local channel = 'CHAT_MSG_' .. channel
+
+	while frame do
+		if frame:IsEventRegistered(channel) then
+			if frame.MessageEventHandler then
+				frame:MessageEventHandler(channel, text, '', nil, '')
+			elseif ChatFrame_MessageEventHandler then
+				ChatFrame_MessageEventHandler(frame, channel, text, '', nil, '')
+			end
+		end
+
+		i = i + 1
+		frame = _G['ChatFrame' .. i]
+	end
 end

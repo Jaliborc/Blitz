@@ -29,7 +29,7 @@ end
 
 function Button:OnClick()
 	local id = GetQuestID()
-	Addon.sets.quests[id] = not Addon.sets.quests[id] or nil
+	Addon.sets.quests[id] = not Addon.sets.quests[id]
 	self:SaveQuest()
 end
 

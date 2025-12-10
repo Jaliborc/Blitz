@@ -1,0 +1,14 @@
+<Bindings>
+	<Binding name="BLITZ_TOGGLE" category="Blitz">
+        local L = Blitz.Locals
+        local id = GetQuestID()
+        
+        if id and Blitz.Button:IsShown() then
+            Blitz.Button:OnClick()
+            Blitz.Button:SetChecked(not Blitz.Button:GetChecked())
+            Blitz:Print('SYSTEM', Blitz:IsEnabled(id) and L.AutomationOn or L.AutomationOff)
+        else
+            Blitz:Print('SYSTEM', L.NoQuest)
+        end
+	</Binding>
+</Bindings>

@@ -54,7 +54,7 @@ end
 --[[ Quest ]]--
 
 function Events:QUEST_DETAIL()
-	if Addon:IsKeyDown() and (Addon.sets.accept or Addon:IsAutomated(GetQuestID())) then
+	if Addon:IsKeyDown() and (Addon.sets.accept or Addon:IsEnabled(GetQuestID())) then
 		AcceptQuest()
 	end
 end
@@ -97,7 +97,7 @@ end
 --[[ API ]]--
 
 function Events:NumSkips(id)
-	local status = Addon:IsAutomated(id)
+	local status = Addon:IsEnabled(id)
 	if type(status) ~= 'string' then
 		if id and C.QuestLog.IsOnQuest(id) then
 			return (status or Addon.sets.deliver) and C.QuestLog.IsComplete(id) and 0
