@@ -2,10 +2,10 @@
 	<Script file="LibStub\LibStub.lua"/>
 	<Script file="CallbackHandler-1.0\CallbackHandler-1.0.lua"/>
 	<Script file="WildAddon-1.1\WildAddon-1.1.lua"/>
+	<Script file="StaleCheck-1.0\StaleCheck-1.0.lua"/>
 	<Script file="C_Everywhere\C_Everywhere.lua"/>
 
 	<Include file="Poncho-2.0\Poncho-2.0.xml"/>
-	
   	<Script file="Sushi-3.2\Sushi-3.2.lua"/>
 	<Script file="Sushi-3.2\classes\core\callable.lua"/>
 	<Script file="Sushi-3.2\classes\core\tipped.lua"/>

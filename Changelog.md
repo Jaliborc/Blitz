@@ -1,4 +1,8 @@
-## 11.2.1
+### 11.2.2
+* Added support for Burning Crusade Anniversary realms.
+* Added StaleCheck-1.0.
+
+### 11.2.1
 * All: Added keybinding for toggling quest automation.
 * Retail: Added support for Midnight open beta.
 

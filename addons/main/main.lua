@@ -1,21 +1,21 @@
 --[[
-Copyright 2009-2025 João Cardoso
+Copyright 2009-2026 João Cardoso
 All Rights Reserved
 --]]
 
 local ADDON, Addon = ...
 local C = LibStub('C_Everywhere')
-local Blitz = LibStub('WildAddon-1.1'):NewAddon(ADDON, Addon)
+local Blitz = LibStub('WildAddon-1.1'):NewAddon(ADDON, Addon, 'StaleCheck-1.0')
 
 
 --[[ Startup ]]--
 
 function Blitz:OnLoad()
-	CreateFrame('Frame', nil, SettingsPanel or InterfaceOptionsFrame)
-		:SetScript('OnShow', function() self:LoadModule('Config') end)
+	self.sets = self:SetDefaults(Blitz_Sets or {}, {quests = {}, key = 'Shift'})
+	self:CheckForUpdates(ADDON, self.sets, 'Interface/PVPFrame/Icons/prestige-icon-4-1')
 
-	Blitz_Sets = self:SetDefaults(Blitz_Sets or {}, {quests = {}, key = 'Shift'})
-	self.sets = Blitz_Sets
+	SettingsPanel.CategoryList:HookScript('OnShow', function() self:LoadModule('Config') end)
+	Blitz_Sets = self.sets
 end
 
 function Blitz:LoadModule(name)

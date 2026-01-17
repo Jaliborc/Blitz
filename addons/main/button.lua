@@ -1,5 +1,5 @@
 --[[
-Copyright 2009-2025 João Cardoso
+Copyright 2009-2026 João Cardoso
 All Rights Reserved
 --]]
 
@@ -10,21 +10,21 @@ local Button = Addon:NewModule('Button', LibStub('Sushi-3.2').Check(QuestFrame))
 --[[ Startup ]]--
 
 function Button:OnLoad()
-  self:SetCall('OnClick', self.OnClick)
-  self:SetText(Addon.Locals.AutomateQuest)
-  self:RegisterEvent('QUEST_DETAIL', 'UpdateOffer')
-  self:RegisterEvent('QUEST_PROGRESS', 'UpdateActive')
-  self:RegisterEvent('QUEST_COMPLETE', 'UpdateActive')
+	self:SetCall('OnClick', self.OnClick)
+	self:SetText(Addon.Locals.AutomateQuest)
+	self:RegisterEvent('QUEST_DETAIL', 'UpdateOffer')
+	self:RegisterEvent('QUEST_PROGRESS', 'UpdateActive')
+	self:RegisterEvent('QUEST_COMPLETE', 'UpdateActive')
 
-  if not ImmersionContentFrame then
-    self:SetPoint('TOPLEFT', 74, WOW_PROJECT_ID == WOW_PROJECT_CLASSIC and -50 or -30)
-  else
-    self:SetPoint('TOPRIGHT', -80, 0)
-  end
+	if not ImmersionContentFrame then
+		self:SetPoint('TOPLEFT', 74, WOW_PROJECT_ID == WOW_PROJECT_MAINLINE and -30 or -50)
+	else
+		self:SetPoint('TOPRIGHT', -80, 0)
+	end
 
-  hooksecurefunc('QuestInfoItem_OnClick', function()
-    self:SaveQuest()
-  end)
+	hooksecurefunc('QuestInfoItem_OnClick', function()
+		self:SaveQuest()
+	end)
 end
 
 function Button:OnClick()
@@ -37,11 +37,11 @@ end
 --[[ Update ]]--
 
 function Button:UpdateOffer()
-  self:UpdateButton(false)
+	self:UpdateButton(false)
 end
 
 function Button:UpdateActive()
-  self:UpdateButton(true)
+	self:UpdateButton(true)
 end
 
 
