@@ -3,3 +3,8 @@
   Blitz_Progress
 [project]
   21541
+[ignore]
+  BagBrother/libs/Sushi-3.2/Classes/Groups/FauxScroll.lua
+  BagBrother/libs/C_Everywhere/Tests.lua
+  BagBrother/libs/Poncho-2.0/Tests.lua
+  BagBrother/libs/Sushi-3.2/Tests
